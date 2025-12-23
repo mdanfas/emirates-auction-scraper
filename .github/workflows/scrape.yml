@@ -80,11 +80,14 @@ jobs:
         if: steps.mode.outputs.mode != 'scrape' && steps.mode.outputs.mode != 'discover' && steps.mode.outputs.mode != 'buynow'
         run: python -m scraper.main --emirate ${{ steps.mode.outputs.mode }}
 
+      - name: Export dashboard data
+        run: python -m scraper.export_data
+
       - name: Commit changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/ || true
+          git add data/ dashboard/public/data.json || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
