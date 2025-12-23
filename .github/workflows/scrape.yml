@@ -1,18 +1,18 @@
 name: Scrape Emirates Auction
 
 on:
-  # Run every hour at minute 0
+  # Hourly scrape for active auctions
   schedule:
     - cron: '0 * * * *'
   
   # Allow manual trigger
   workflow_dispatch:
     inputs:
-      force_rapid:
-        description: 'Force rapid mode (5-min intervals)'
+      mode:
+        description: 'Mode: scrape, discover, or emirate name (sharjah, dubai, etc.)'
         required: false
-        default: 'false'
-        type: boolean
+        default: 'scrape'
+        type: string
       reset_tracking:
         description: 'Reset tracking for new auction'
         required: false
@@ -31,9 +31,8 @@ jobs:
     runs-on: ubuntu-latest
     
     outputs:
-      status: ${{ steps.scrape.outputs.status }}
-      rapid_mode: ${{ steps.scrape.outputs.rapid_mode }}
-      should_continue: ${{ steps.scrape.outputs.should_continue }}
+      any_rapid_mode: ${{ steps.scrape.outputs.any_rapid_mode }}
+      any_active: ${{ steps.scrape.outputs.any_active }}
 
     steps:
       - name: Checkout repository
@@ -50,26 +49,44 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run scraper
-        id: scrape
-        env:
-          RESET_TRACKING: ${{ github.event.inputs.reset_tracking }}
+      - name: Determine scrape mode
+        id: mode
         run: |
-          if [ "$RESET_TRACKING" = "true" ]; then
-            python -m scraper.main --reset
-          else
-            python -m scraper.main
+          MODE="${{ github.event.inputs.mode || 'scrape' }}"
+          RESET="${{ github.event.inputs.reset_tracking }}"
+          echo "mode=$MODE" >> $GITHUB_OUTPUT
+          echo "reset=$RESET" >> $GITHUB_OUTPUT
+          echo "Running in mode: $MODE"
+
+      - name: Run discovery
+        if: steps.mode.outputs.mode == 'discover'
+        id: discover
+        run: python -m scraper.main --discover
+
+      - name: Run scraper (all emirates)
+        if: steps.mode.outputs.mode == 'scrape'
+        id: scrape
+        run: |
+          ARGS=""
+          if [ "${{ steps.mode.outputs.reset }}" = "true" ]; then
+            ARGS="--reset"
           fi
+          python -m scraper.main $ARGS
+
+      - name: Run scraper (single emirate)
+        if: steps.mode.outputs.mode != 'scrape' && steps.mode.outputs.mode != 'discover'
+        run: |
+          ARGS="--emirate ${{ steps.mode.outputs.mode }}"
+          if [ "${{ steps.mode.outputs.reset }}" = "true" ]; then
+            ARGS="$ARGS --reset"
+          fi
+          python -m scraper.main $ARGS
 
       - name: Commit changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
-          # Add data files
           git add data/ || true
-          
-          # Check if there are changes to commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
@@ -80,15 +97,36 @@ jobs:
   # Trigger rapid mode if needed
   trigger-rapid:
     needs: scrape
-    if: needs.scrape.outputs.rapid_mode == 'true' && needs.scrape.outputs.should_continue == 'true'
+    if: needs.scrape.outputs.any_rapid_mode == 'true' && needs.scrape.outputs.any_active == 'true'
     runs-on: ubuntu-latest
     
     steps:
       - name: Wait before rapid trigger
-        run: sleep 300  # Wait 5 minutes
+        run: sleep 300
 
       - name: Trigger rapid scrape
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: rapid-scrape
+
+  # Discovery job - runs separately every 4 days
+  discover:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 6 */4 * *'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run discovery
+        run: python -m scraper.main --discover

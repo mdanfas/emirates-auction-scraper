@@ -7,31 +7,21 @@ from datetime import datetime
 from typing import Optional
 from .config import (
     PLATES_ENDPOINT,
-    EMIRATE_ID,
+    EMIRATES_CONFIG,
     REQUEST_TIMEOUT,
     USER_AGENT,
-    ACTIVE_EMIRATE,
 )
-
-
-# Auction Type IDs for each emirate (these map to online auctions)
-AUCTION_TYPE_IDS = {
-    "sharjah": 21,
-    "dubai": 1,  # May need to verify
-    "abudhabi": 2,  # May need to verify
-    "ajman": 4,
-    "umm_al_quwain": 5,
-    "ras_al_khaimah": 6,
-    "fujairah": 7,
-}
 
 
 class EmiratesAuctionAPI:
     """Client for interacting with Emirates Auction API"""
 
-    def __init__(self, emirate: str = ACTIVE_EMIRATE):
+    def __init__(self, emirate: str):
         self.emirate = emirate
-        self.auction_type_id = AUCTION_TYPE_IDS.get(emirate, 21)
+        config = EMIRATES_CONFIG.get(emirate, {})
+        self.auction_type_id = config.get("auction_type_id", 0)
+        self.display_name = config.get("display_name", emirate)
+        
         self.session = requests.Session()
         self.session.headers.update({
             "Content-Type": "application/json",
@@ -50,8 +40,8 @@ class EmiratesAuctionAPI:
                 - plates: list of plate data
                 - total_count: total number of plates
                 - auction_info: auction metadata
+                - is_active: whether there's an active auction
         """
-        # Correct payload structure discovered from browser inspection
         payload = {
             "PlateFilterRequest": {
                 "PlateTypeIds": {"Filter": [], "IsSelected": False},
@@ -62,7 +52,7 @@ class EmiratesAuctionAPI:
                 "IsExactSearch": False,
                 "AuctionTypeId": self.auction_type_id
             },
-            "PageSize": 150,  # Get all plates in one request
+            "PageSize": 150,
             "PageIndex": 0,
             "IsDesc": False
         }
@@ -73,20 +63,35 @@ class EmiratesAuctionAPI:
                 json=payload,
                 timeout=REQUEST_TIMEOUT
             )
+            
+            if response.status_code == 400:
+                error_data = response.json()
+                if "invalid.typeid" in str(error_data):
+                    return {
+                        "plates": [],
+                        "total_count": 0,
+                        "auction_info": {
+                            "auction_type_id": self.auction_type_id,
+                            "emirate": self.emirate,
+                            "display_name": self.display_name,
+                        },
+                        "is_active": False,
+                    }
+                print(f"API Error for {self.emirate}: {error_data}")
+                return {"plates": [], "total_count": 0, "auction_info": None, "is_active": False}
+            
             response.raise_for_status()
             data = response.json()
             
             return self._parse_response(data)
             
         except requests.RequestException as e:
-            print(f"Error fetching plates: {e}")
-            return {"plates": [], "total_count": 0, "auction_info": None}
+            print(f"Error fetching plates for {self.emirate}: {e}")
+            return {"plates": [], "total_count": 0, "auction_info": None, "is_active": False}
 
     def _parse_response(self, data: dict) -> dict:
         """Parse API response into structured format"""
         plates = []
-        
-        # Data is in the "Data" key
         items = data.get("Data", [])
         total_count = data.get("TotalCount", len(items))
         
@@ -95,10 +100,12 @@ class EmiratesAuctionAPI:
             if plate:
                 plates.append(plate)
         
-        # Extract auction info
+        is_active = len(plates) > 0
+        
         auction_info = {
             "auction_type_id": self.auction_type_id,
             "emirate": self.emirate,
+            "display_name": self.display_name,
             "total_count": total_count,
         }
         
@@ -106,38 +113,33 @@ class EmiratesAuctionAPI:
             "plates": plates,
             "total_count": total_count,
             "auction_info": auction_info,
+            "is_active": is_active,
         }
 
     def _parse_plate(self, item: dict) -> Optional[dict]:
         """Parse a single plate item from API response"""
         try:
-            # The API uses these exact field names
             lot_id = item.get("Id")
-            
             if not lot_id:
                 return None
             
             plate_number = item.get("PlateNumber", "")
             plate_code = item.get("PlateCode", "")
             
-            # Price can be in different formats
             current_price_str = item.get("CurrentPriceStr", "0")
-            # Remove commas and convert to int
             try:
-                current_price = int(current_price_str.replace(",", "").replace(" ", ""))
+                current_price = int(str(current_price_str).replace(",", "").replace(" ", ""))
             except (ValueError, AttributeError):
                 current_price = item.get("CurrentPrice", 0) or 0
             
             bid_count = item.get("Bids", 0) or 0
             
-            # End date timestamp (Unix seconds)
             end_date_timestamp = item.get("EndDateTimestamp")
             time_remaining_seconds = None
             end_date = None
             
             if end_date_timestamp:
                 try:
-                    # Convert timestamp to datetime
                     end_date = datetime.fromtimestamp(end_date_timestamp)
                     now = datetime.now()
                     delta = end_date - now
@@ -146,7 +148,6 @@ class EmiratesAuctionAPI:
                 except (ValueError, TypeError, OSError):
                     pass
             
-            # Status: 1 = active, others may mean completed
             status = item.get("Status", 1)
 
             return {
@@ -165,7 +166,23 @@ class EmiratesAuctionAPI:
             return None
 
 
-def fetch_current_plates(emirate: str = ACTIVE_EMIRATE) -> dict:
-    """Convenience function to fetch current plates"""
+def fetch_current_plates(emirate: str) -> dict:
+    """Convenience function to fetch current plates for an emirate"""
     api = EmiratesAuctionAPI(emirate=emirate)
     return api.fetch_plates()
+
+
+def check_active_auctions() -> dict:
+    """Check which emirates have active auctions."""
+    results = {}
+    
+    for emirate in EMIRATES_CONFIG.keys():
+        api = EmiratesAuctionAPI(emirate=emirate)
+        data = api.fetch_plates()
+        results[emirate] = {
+            "is_active": data.get("is_active", False),
+            "plate_count": data.get("total_count", 0),
+            "display_name": EMIRATES_CONFIG[emirate].get("display_name", emirate),
+        }
+    
+    return results

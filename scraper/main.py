@@ -7,113 +7,126 @@ import sys
 import json
 from datetime import datetime
 
-from .api import fetch_current_plates
+from .api import fetch_current_plates, check_active_auctions
 from .tracker import AuctionTracker
-from .config import ACTIVE_EMIRATE, EMIRATE_ID
+from .config import ALL_EMIRATES, EMIRATES_CONFIG
 
 
-def main():
-    """Main scraping function"""
-    print(f"=" * 60)
-    print(f"Emirates Auction Scraper - {ACTIVE_EMIRATE.upper()}")
-    print(f"Run time: {datetime.utcnow().isoformat()}Z")
-    print(f"=" * 60)
+def scrape_emirate(emirate: str) -> dict:
+    """Scrape a single emirate and return results"""
+    display_name = EMIRATES_CONFIG.get(emirate, {}).get("display_name", emirate)
     
-    # Initialize tracker
-    tracker = AuctionTracker()
-    print(f"\nLoaded tracking state: {tracker.state.get('auction_id', 'new')}")
-    print(f"Current status: {tracker.state.get('status', 'unknown')}")
+    print(f"\n{'='*50}")
+    print(f"Scraping: {display_name}")
+    print(f"{'='*50}")
     
-    # Check if auction already completed
+    tracker = AuctionTracker(emirate)
+    print(f"Loaded tracking state: {tracker.state.get('auction_id', 'new')}")
+    
     if tracker.state.get("status") == "completed":
-        print("\nAuction already marked as completed.")
-        print("Run with --reset to start tracking a new auction.")
-        
+        print(f"Auction already completed for {display_name}.")
         if "--reset" in sys.argv:
-            print("Resetting for new auction...")
+            print("Resetting...")
             tracker.reset_for_new_auction()
         else:
-            return {
-                "status": "already_completed",
-                "should_continue": False,
-                "rapid_mode": False,
-            }
+            return {"emirate": emirate, "status": "already_completed", "should_continue": False, "rapid_mode": False}
     
-    # Fetch latest data from API
-    print(f"\nFetching plates from API (Emirate: {ACTIVE_EMIRATE})...")
-    api_data = fetch_current_plates(emirate=ACTIVE_EMIRATE)
+    print(f"Fetching plates from API...")
+    api_data = fetch_current_plates(emirate=emirate)
+    
+    if not api_data.get("is_active", False):
+        print(f"No active auction for {display_name}")
+        return {"emirate": emirate, "status": "no_auction", "should_continue": False, "rapid_mode": False}
     
     plate_count = len(api_data.get("plates", []))
-    print(f"Fetched {plate_count} active plates from API")
+    print(f"Fetched {plate_count} active plates")
     
-    if plate_count == 0 and len(tracker.state.get("plates", {})) > 0:
-        print("WARNING: API returned 0 plates but we have tracked plates.")
-        print("This might indicate the auction has ended or an API issue.")
-    
-    # Update tracker with new data
     result = tracker.update_from_api(api_data)
     
-    print(f"\nUpdate Results:")
-    print(f"  - New plates discovered: {result['new_plates']}")
-    print(f"  - Plates with price changes: {result['updated_plates']}")
-    print(f"  - Plates just completed: {result['completed_plates']}")
-    print(f"  - Total tracked plates: {result['total_count']}")
-    print(f"  - Still active: {result['active_count']}")
+    print(f"  New: {result['new_plates']}, Updated: {result['updated_plates']}, Completed: {result['completed_plates']}")
+    print(f"  Total: {result['total_count']}, Active: {result['active_count']}")
     
-    if result.get("min_time_remaining_seconds") is not None:
-        mins = result["min_time_remaining_seconds"] // 60
-        hours = mins // 60
-        mins = mins % 60
-        print(f"  - Min time remaining: {hours}h {mins}m")
-    
-    # Check if in rapid mode
     rapid_mode = result.get("is_final_hours", False)
     if rapid_mode:
-        print(f"\n⚡ RAPID MODE: Some plates have < 2 hours remaining!")
+        print(f"⚡ RAPID MODE: Plates < 2 hours remaining!")
     
-    # Save updated state
     tracker.save_state()
-    print(f"\nTracking state saved.")
     
-    # Check if auction is complete
     if tracker.is_auction_complete():
-        print(f"\n🎉 ALL PLATES COMPLETED!")
-        print("Generating final CSV...")
-        
+        print(f"🎉 ALL PLATES COMPLETED for {display_name}!")
         csv_path = tracker.generate_final_csv()
         tracker.save_state()
-        
-        print(f"Final results saved to: {csv_path}")
-        
-        # Print summary of top 10 plates
-        print(f"\nTop 10 Plates by Final Price:")
-        print("-" * 50)
-        
-        sorted_plates = sorted(
-            tracker.state["plates"].values(),
-            key=lambda x: x.get("final_price", 0) or 0,
-            reverse=True
-        )[:10]
-        
-        for i, plate in enumerate(sorted_plates, 1):
-            price = plate.get("final_price", 0) or plate.get("current_price", 0)
-            print(f"  {i}. Plate {plate['plate_number']} (Code {plate['plate_code']}): AED {price:,}")
-        
-        return {
-            "status": "completed",
-            "csv_path": csv_path,
-            "should_continue": False,
-            "rapid_mode": False,
-        }
+        print(f"Final CSV: {csv_path}")
+        return {"emirate": emirate, "status": "completed", "csv_path": csv_path, "should_continue": False, "rapid_mode": False}
     
-    # Return status for GitHub Actions
     return {
+        "emirate": emirate,
         "status": "active",
         "should_continue": True,
         "rapid_mode": rapid_mode,
         "active_plates": result["active_count"],
         "total_plates": result["total_count"],
     }
+
+
+def main():
+    """Main scraping function"""
+    print(f"{'='*60}")
+    print(f"Emirates Auction Scraper - Multi-Emirate")
+    print(f"Run time: {datetime.utcnow().isoformat()}Z")
+    print(f"{'='*60}")
+    
+    if "--discover" in sys.argv:
+        print("\n🔍 DISCOVERY MODE: Checking all emirates...")
+        active_auctions = check_active_auctions()
+        
+        for emirate, info in active_auctions.items():
+            status = "✅ ACTIVE" if info["is_active"] else "❌ No auction"
+            count = f"({info['plate_count']} plates)" if info["is_active"] else ""
+            print(f"  {info['display_name']}: {status} {count}")
+        
+        active_list = [e for e, info in active_auctions.items() if info["is_active"]]
+        set_github_output("active_emirates", ",".join(active_list))
+        set_github_output("has_active", str(len(active_list) > 0).lower())
+        
+        return {"mode": "discover", "active_emirates": active_list, "details": active_auctions}
+    
+    if "--emirate" in sys.argv:
+        idx = sys.argv.index("--emirate")
+        if idx + 1 < len(sys.argv):
+            emirates_to_scrape = [sys.argv[idx + 1]]
+        else:
+            print("Error: --emirate requires emirate name")
+            return {"status": "error"}
+    else:
+        emirates_to_scrape = ALL_EMIRATES
+    
+    results = {}
+    any_rapid_mode = any_active = False
+    
+    for emirate in emirates_to_scrape:
+        if emirate not in EMIRATES_CONFIG:
+            print(f"Unknown emirate: {emirate}")
+            continue
+        
+        result = scrape_emirate(emirate)
+        results[emirate] = result
+        
+        if result.get("rapid_mode", False):
+            any_rapid_mode = True
+        if result.get("should_continue", False):
+            any_active = True
+    
+    print(f"\n{'='*60}")
+    print("SUMMARY")
+    for emirate, result in results.items():
+        display_name = EMIRATES_CONFIG.get(emirate, {}).get("display_name", emirate)
+        print(f"  {display_name}: {result.get('status')} ({result.get('total_plates', 0)} plates)")
+    
+    set_github_output("any_rapid_mode", str(any_rapid_mode).lower())
+    set_github_output("any_active", str(any_active).lower())
+    
+    return {"results": results, "any_rapid_mode": any_rapid_mode, "any_active": any_active}
 
 
 def set_github_output(key: str, value: str):
@@ -128,12 +141,6 @@ def set_github_output(key: str, value: str):
 
 if __name__ == "__main__":
     result = main()
-    
-    # Set outputs for GitHub Actions
-    set_github_output("status", result.get("status", "unknown"))
-    set_github_output("should_continue", str(result.get("should_continue", False)).lower())
-    set_github_output("rapid_mode", str(result.get("rapid_mode", False)).lower())
-    
-    print(f"\n" + "=" * 60)
+    print(f"\n{'='*60}")
     print("Run complete!")
-    print(json.dumps(result, indent=2))
+    print(json.dumps(result, indent=2, default=str))
