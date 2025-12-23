@@ -1,0 +1,3 @@
+"""
+Emirates Auction Scraper Package
+"""

@@ -1,0 +1,94 @@
+name: Scrape Emirates Auction
+
+on:
+  # Run every hour at minute 0
+  schedule:
+    - cron: '0 * * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      force_rapid:
+        description: 'Force rapid mode (5-min intervals)'
+        required: false
+        default: 'false'
+        type: boolean
+      reset_tracking:
+        description: 'Reset tracking for new auction'
+        required: false
+        default: 'false'
+        type: boolean
+  
+  # Self-trigger for rapid mode
+  repository_dispatch:
+    types: [rapid-scrape]
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    
+    outputs:
+      status: ${{ steps.scrape.outputs.status }}
+      rapid_mode: ${{ steps.scrape.outputs.rapid_mode }}
+      should_continue: ${{ steps.scrape.outputs.should_continue }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scraper
+        id: scrape
+        env:
+          RESET_TRACKING: ${{ github.event.inputs.reset_tracking }}
+        run: |
+          if [ "$RESET_TRACKING" = "true" ]; then
+            python -m scraper.main --reset
+          else
+            python -m scraper.main
+          fi
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          # Add data files
+          git add data/ || true
+          
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "📊 Update auction data - $(date -u '+%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+  # Trigger rapid mode if needed
+  trigger-rapid:
+    needs: scrape
+    if: needs.scrape.outputs.rapid_mode == 'true' && needs.scrape.outputs.should_continue == 'true'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Wait before rapid trigger
+        run: sleep 300  # Wait 5 minutes
+
+      - name: Trigger rapid scrape
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: rapid-scrape
