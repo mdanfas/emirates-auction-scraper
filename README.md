@@ -1,63 +1,53 @@
-# Emirates Auction Number Plate Scraper
+# Emirates Auction Scraper
 
-Automated scraper for tracking UAE number plate auction prices from [emiratesauction.com](https://www.emiratesauction.com). Runs on GitHub Actions to capture final winning bids even when you're offline.
-
-## Supported Emirates
-
-| Emirate | Auction Type ID |
-|---------|-----------------|
-| Sharjah | 21 |
-| Dubai | 46 |
-| Abu Dhabi | 1 |
-| Ajman | 25 |
-| RAK | 15 |
-| UAQ | 7 |
-| Fujairah | 12 |
+Automated scraper for UAE number plate auctions from [emiratesauction.com](https://www.emiratesauction.com).
 
 ## Features
 
-- 🕐 **Hourly scraping** during active auctions
-- ⚡ **Rapid mode** (every 5 minutes) when plates are in final hours
-- 🔍 **Discovery mode** to detect new auctions across all emirates
-- 💾 **Persistent tracking** - plates preserved after removal
-- 📊 **Final CSV export** per emirate when auction ends
-- 🌍 **Multi-emirate support** - tracks all 7 emirates independently
+- 🕐 **Hourly auction scraping** with rapid mode (5min) in final hours
+- 🛒 **Buy Now scraping** every 4 days for direct-sale plates
+- 📊 **Per-emirate CSVs** for organized data storage
+- 🤖 **GitHub Actions** for reliable automation
+
+## Emirates
+
+| Emirate | Auction ID | Buy Now ID |
+|---------|------------|------------|
+| Sharjah | 21 | 23 |
+| Dubai | 46 | - |
+| Abu Dhabi | 1 | - |
+| Ajman | 25 | 27 |
+| RAK | 15 | 16 |
+| UAQ | 7 | 18 |
+| Fujairah | 12 | 14 |
 
 ## Usage
 
-### Manual Trigger (GitHub Actions)
-
-1. Go to **Actions** tab
-2. Select "Scrape Emirates Auction"
-3. Click "Run workflow"
-4. Options:
-   - `scrape` - Scrape all emirates
-   - `discover` - Check which emirates have active auctions
-   - `sharjah`, `dubai`, etc. - Scrape specific emirate
-
-### Local Development
-
 ```bash
-pip install -r requirements.txt
+# Auction scraping (all emirates)
+python -m scraper.main
+
+# Single emirate
+python -m scraper.main --emirate sharjah
 
 # Discovery mode
 python -m scraper.main --discover
 
-# Scrape all emirates
-python -m scraper.main
-
-# Scrape specific emirate
-python -m scraper.main --emirate sharjah
-
-# Reset tracking
-python -m scraper.main --emirate sharjah --reset
+# Buy Now scraping
+python -m scraper.main --buynow
+python -m scraper.main --buynow --emirate ajman
 ```
 
-## Output Files
+## Output
 
-- `data/tracking_<emirate>.json` - Live tracking per emirate
-- `data/archive/<emirate>_YYYY-MM-DD.csv` - Final results
+- `data/tracking_<emirate>.json` - Live auction tracking
+- `data/archive/<emirate>_YYYY-MM-DD.csv` - Completed auctions
+- `data/buynow/<emirate>_buynow.csv` - Buy Now plates
 
-## License
+## Schedule
 
-MIT
+| Schedule | Action |
+|----------|--------|
+| Hourly | Auction scraping |
+| Every 4 days | Buy Now scraping |
+| 5 minutes | Rapid mode (final hours) |

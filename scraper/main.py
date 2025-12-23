@@ -9,15 +9,16 @@ from datetime import datetime
 
 from .api import fetch_current_plates, check_active_auctions
 from .tracker import AuctionTracker
-from .config import ALL_EMIRATES, EMIRATES_CONFIG
+from .buynow import scrape_all_buynow, scrape_buynow_emirate
+from .config import ALL_EMIRATES, EMIRATES_CONFIG, BUYNOW_EMIRATES
 
 
 def scrape_emirate(emirate: str) -> dict:
-    """Scrape a single emirate and return results"""
+    """Scrape a single emirate auction and return results"""
     display_name = EMIRATES_CONFIG.get(emirate, {}).get("display_name", emirate)
     
     print(f"\n{'='*50}")
-    print(f"Scraping: {display_name}")
+    print(f"Auction: {display_name}")
     print(f"{'='*50}")
     
     tracker = AuctionTracker(emirate)
@@ -72,10 +73,29 @@ def scrape_emirate(emirate: str) -> dict:
 def main():
     """Main scraping function"""
     print(f"{'='*60}")
-    print(f"Emirates Auction Scraper - Multi-Emirate")
+    print(f"Emirates Auction Scraper")
     print(f"Run time: {datetime.utcnow().isoformat()}Z")
     print(f"{'='*60}")
     
+    # Buy Now mode - scrape Buy Now sections
+    if "--buynow" in sys.argv:
+        print("\n🛒 BUY NOW MODE")
+        
+        if "--emirate" in sys.argv:
+            idx = sys.argv.index("--emirate")
+            if idx + 1 < len(sys.argv):
+                emirate = sys.argv[idx + 1]
+                if emirate in BUYNOW_EMIRATES:
+                    result = scrape_buynow_emirate(emirate)
+                    return {"mode": "buynow", "results": {emirate: result}}
+                else:
+                    print(f"No Buy Now section for {emirate}")
+                    return {"mode": "buynow", "status": "no_section"}
+        
+        result = scrape_all_buynow()
+        return {"mode": "buynow", **result}
+    
+    # Discovery mode
     if "--discover" in sys.argv:
         print("\n🔍 DISCOVERY MODE: Checking all emirates...")
         active_auctions = check_active_auctions()
@@ -91,6 +111,7 @@ def main():
         
         return {"mode": "discover", "active_emirates": active_list, "details": active_auctions}
     
+    # Single emirate mode
     if "--emirate" in sys.argv:
         idx = sys.argv.index("--emirate")
         if idx + 1 < len(sys.argv):
@@ -101,6 +122,7 @@ def main():
     else:
         emirates_to_scrape = ALL_EMIRATES
     
+    # Scrape auctions
     results = {}
     any_rapid_mode = any_active = False
     

@@ -1,15 +1,14 @@
 name: Scrape Emirates Auction
 
 on:
-  # Hourly scrape for active auctions
   schedule:
-    - cron: '0 * * * *'
+    - cron: '0 * * * *'      # Every hour for auctions
+    - cron: '0 6 */4 * *'    # Every 4 days for Buy Now
   
-  # Allow manual trigger
   workflow_dispatch:
     inputs:
       mode:
-        description: 'Mode: scrape, discover, or emirate name (sharjah, dubai, etc.)'
+        description: 'Mode: scrape, discover, buynow, or emirate name'
         required: false
         default: 'scrape'
         type: string
@@ -19,7 +18,6 @@ on:
         default: 'false'
         type: boolean
   
-  # Self-trigger for rapid mode
   repository_dispatch:
     types: [rapid-scrape]
 
@@ -37,8 +35,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,38 +45,40 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Determine scrape mode
+      - name: Determine mode
         id: mode
         run: |
           MODE="${{ github.event.inputs.mode || 'scrape' }}"
-          RESET="${{ github.event.inputs.reset_tracking }}"
+          
+          # 4-day schedule = Buy Now mode
+          if [[ "${{ github.event.schedule }}" == "0 6 */4 * *" ]]; then
+            MODE="buynow"
+          fi
+          
           echo "mode=$MODE" >> $GITHUB_OUTPUT
-          echo "reset=$RESET" >> $GITHUB_OUTPUT
           echo "Running in mode: $MODE"
 
       - name: Run discovery
         if: steps.mode.outputs.mode == 'discover'
-        id: discover
         run: python -m scraper.main --discover
 
-      - name: Run scraper (all emirates)
+      - name: Run Buy Now scraper
+        if: steps.mode.outputs.mode == 'buynow'
+        run: python -m scraper.main --buynow
+
+      - name: Run auction scraper (all)
         if: steps.mode.outputs.mode == 'scrape'
         id: scrape
         run: |
           ARGS=""
-          if [ "${{ steps.mode.outputs.reset }}" = "true" ]; then
+          if [ "${{ github.event.inputs.reset_tracking }}" = "true" ]; then
             ARGS="--reset"
           fi
           python -m scraper.main $ARGS
 
-      - name: Run scraper (single emirate)
-        if: steps.mode.outputs.mode != 'scrape' && steps.mode.outputs.mode != 'discover'
-        run: |
-          ARGS="--emirate ${{ steps.mode.outputs.mode }}"
-          if [ "${{ steps.mode.outputs.reset }}" = "true" ]; then
-            ARGS="$ARGS --reset"
-          fi
-          python -m scraper.main $ARGS
+      - name: Run auction scraper (single emirate)
+        if: steps.mode.outputs.mode != 'scrape' && steps.mode.outputs.mode != 'discover' && steps.mode.outputs.mode != 'buynow'
+        run: python -m scraper.main --emirate ${{ steps.mode.outputs.mode }}
 
       - name: Commit changes
         run: |
@@ -94,39 +92,13 @@ jobs:
             git push
           fi
 
-  # Trigger rapid mode if needed
   trigger-rapid:
     needs: scrape
     if: needs.scrape.outputs.any_rapid_mode == 'true' && needs.scrape.outputs.any_active == 'true'
     runs-on: ubuntu-latest
-    
     steps:
-      - name: Wait before rapid trigger
-        run: sleep 300
-
-      - name: Trigger rapid scrape
-        uses: peter-evans/repository-dispatch@v3
+      - run: sleep 300
+      - uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           event-type: rapid-scrape
-
-  # Discovery job - runs separately every 4 days
-  discover:
-    runs-on: ubuntu-latest
-    if: github.event.schedule == '0 6 */4 * *'
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: 'pip'
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Run discovery
-        run: python -m scraper.main --discover
