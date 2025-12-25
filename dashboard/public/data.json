@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-12-25T12:48:12.981325Z",
+  "generated_at": "2025-12-25T13:34:08.166712Z",
   "buynow": {
     "rak": {
       "emirate": "Ras Al Khaimah",
@@ -3021,11 +3021,29 @@
     }
   },
   "auctions": {
+    "dubai": {
+      "auction_id": "dubai_2025-12",
+      "emirate": "Dubai",
+      "start_date": "2025-12-25T13:34:04.042911Z",
+      "last_updated": "2025-12-25T13:34:04.993935Z",
+      "status": "active",
+      "plates": [
+        {
+          "id": "610470",
+          "plate_number": "6789",
+          "plate_code": "H",
+          "price": 90000,
+          "bid_count": 0,
+          "status": "active"
+        }
+      ],
+      "count": 1
+    },
     "sharjah": {
       "auction_id": "sharjah_2025-12",
       "emirate": "Sharjah",
       "start_date": "2025-12-23T20:16:40.218550Z",
-      "last_updated": "2025-12-25T12:48:08.795030Z",
+      "last_updated": "2025-12-25T13:34:04.040954Z",
       "status": "active",
       "plates": [
         {
@@ -3112,8 +3130,8 @@
           "id": "1916",
           "plate_number": "445",
           "plate_code": "3",
-          "price": 301000,
-          "bid_count": 14,
+          "price": 302000,
+          "bid_count": 15,
           "status": "active"
         },
         {
@@ -3293,19 +3311,19 @@
           "status": "active"
         },
         {
+          "id": "1959",
+          "plate_number": "66660",
+          "plate_code": "4",
+          "price": 61000,
+          "bid_count": 6,
+          "status": "active"
+        },
+        {
           "id": "1952",
           "plate_number": "33334",
           "plate_code": "4",
           "price": 60500,
           "bid_count": 10,
-          "status": "active"
-        },
-        {
-          "id": "1959",
-          "plate_number": "66660",
-          "plate_code": "4",
-          "price": 60500,
-          "bid_count": 5,
           "status": "active"
         },
         {
@@ -3397,6 +3415,14 @@
           "status": "active"
         },
         {
+          "id": "1976",
+          "plate_number": "1111",
+          "plate_code": "1",
+          "price": 41000,
+          "bid_count": 43,
+          "status": "active"
+        },
+        {
           "id": "1933",
           "plate_number": "5100",
           "plate_code": "4",
@@ -3410,14 +3436,6 @@
           "plate_code": "1",
           "price": 40500,
           "bid_count": 15,
-          "status": "active"
-        },
-        {
-          "id": "1976",
-          "plate_number": "1111",
-          "plate_code": "1",
-          "price": 40500,
-          "bid_count": 42,
           "status": "active"
         },
         {
@@ -3597,7 +3615,7 @@
     "buynow_available": 328,
     "buynow_sold": 3,
     "buynow_total": 331,
-    "auctions_total": 70,
+    "auctions_total": 71,
     "archives_count": 0,
     "buynow_emirates": [
       "rak",
@@ -3606,6 +3624,7 @@
       "ajman"
     ],
     "auction_emirates": [
+      "dubai",
       "sharjah"
     ]
   }
