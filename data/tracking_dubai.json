@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2025-12-25T13:34:04.042911Z",
-  "last_updated": "2026-01-05T08:38:06.870187Z",
+  "last_updated": "2026-01-05T09:35:55.130588Z",
   "status": "active",
   "plates": {
     "610470": {
@@ -176,10 +176,10 @@
     "611933": {
       "plate_number": "435",
       "plate_code": "T",
-      "current_price": 100000,
-      "bid_count": 0,
+      "current_price": 102000,
+      "bid_count": 4,
       "first_seen": "2026-01-05T08:38:06.870123Z",
-      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T09:35:55.130517Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -187,16 +187,20 @@
         {
           "price": 100000,
           "timestamp": "2026-01-05T08:38:06.870123Z"
+        },
+        {
+          "price": 102000,
+          "timestamp": "2026-01-05T09:35:55.130517Z"
         }
       ]
     },
     "611936": {
       "plate_number": "819",
       "plate_code": "V",
-      "current_price": 100000,
-      "bid_count": 0,
+      "current_price": 101500,
+      "bid_count": 3,
       "first_seen": "2026-01-05T08:38:06.870123Z",
-      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T09:35:55.130517Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -204,16 +208,20 @@
         {
           "price": 100000,
           "timestamp": "2026-01-05T08:38:06.870123Z"
+        },
+        {
+          "price": 101500,
+          "timestamp": "2026-01-05T09:35:55.130517Z"
         }
       ]
     },
     "611939": {
       "plate_number": "527",
       "plate_code": "G",
-      "current_price": 100000,
-      "bid_count": 0,
+      "current_price": 102000,
+      "bid_count": 4,
       "first_seen": "2026-01-05T08:38:06.870123Z",
-      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T09:35:55.130517Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -221,6 +229,10 @@
         {
           "price": 100000,
           "timestamp": "2026-01-05T08:38:06.870123Z"
+        },
+        {
+          "price": 102000,
+          "timestamp": "2026-01-05T09:35:55.130517Z"
         }
       ]
     }
