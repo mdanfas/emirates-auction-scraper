@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2025-12-25T13:34:04.042911Z",
-  "last_updated": "2025-12-29T19:09:30.926991Z",
+  "last_updated": "2026-01-05T08:38:06.870187Z",
   "status": "active",
   "plates": {
     "610470": {
@@ -13,9 +13,9 @@
       "bid_count": 91,
       "first_seen": "2025-12-25T13:34:04.993869Z",
       "last_seen": "2025-12-29T19:09:30.926921Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 105200,
+      "completed_at": "2026-01-05T08:38:06.870123Z",
       "price_history": [
         {
           "price": 90000,
@@ -172,11 +172,62 @@
           "timestamp": "2025-12-29T12:51:50.342300Z"
         }
       ]
+    },
+    "611933": {
+      "plate_number": "435",
+      "plate_code": "T",
+      "current_price": 100000,
+      "bid_count": 0,
+      "first_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 100000,
+          "timestamp": "2026-01-05T08:38:06.870123Z"
+        }
+      ]
+    },
+    "611936": {
+      "plate_number": "819",
+      "plate_code": "V",
+      "current_price": 100000,
+      "bid_count": 0,
+      "first_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 100000,
+          "timestamp": "2026-01-05T08:38:06.870123Z"
+        }
+      ]
+    },
+    "611939": {
+      "plate_number": "527",
+      "plate_code": "G",
+      "current_price": 100000,
+      "bid_count": 0,
+      "first_seen": "2026-01-05T08:38:06.870123Z",
+      "last_seen": "2026-01-05T08:38:06.870123Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 100000,
+          "timestamp": "2026-01-05T08:38:06.870123Z"
+        }
+      ]
     }
   },
   "stats": {
-    "total_plates_seen": 3,
-    "completed_plates": 2,
-    "active_plates": 1
+    "total_plates_seen": 6,
+    "completed_plates": 3,
+    "active_plates": 3
   }
 }
