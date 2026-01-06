@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-06T07:28:40.942012Z",
+  "generated_at": "2026-01-06T08:35:57.266774Z",
   "buynow": {
     "rak": {
       "emirate": "Ras Al Khaimah",
@@ -3297,7 +3297,7 @@
       "auction_id": "uaq_2025-12",
       "emirate": "Umm Al Quwain",
       "start_date": "2025-12-27T07:21:25.562655Z",
-      "last_updated": "2026-01-06T07:28:40.027875Z",
+      "last_updated": "2026-01-06T08:35:56.299790Z",
       "status": "active",
       "plates": [
         {
@@ -3312,8 +3312,8 @@
           "id": "7665",
           "plate_number": "19",
           "plate_code": "K",
-          "price": 408000,
-          "bid_count": 32,
+          "price": 409000,
+          "bid_count": 33,
           "status": "active"
         },
         {
@@ -3352,8 +3352,8 @@
           "id": "7672",
           "plate_number": "786",
           "plate_code": "N",
-          "price": 114000,
-          "bid_count": 47,
+          "price": 118000,
+          "bid_count": 55,
           "status": "active"
         },
         {
@@ -3627,7 +3627,7 @@
       "auction_id": "dubai_2025-12",
       "emirate": "Dubai",
       "start_date": "2025-12-25T13:34:04.042911Z",
-      "last_updated": "2026-01-06T07:28:37.207084Z",
+      "last_updated": "2026-01-06T08:35:52.872475Z",
       "status": "active",
       "plates": [
         {
@@ -3693,9 +3693,17 @@
           "price": 39200,
           "bid_count": 11,
           "status": "completed"
+        },
+        {
+          "id": "612120",
+          "plate_number": "4867",
+          "plate_code": "D",
+          "price": 20100,
+          "bid_count": 0,
+          "status": "active"
         }
       ],
-      "count": 8
+      "count": 9
     },
     "sharjah": {
       "auction_id": "sharjah_2025-12",
@@ -4273,7 +4281,7 @@
     "buynow_available": 329,
     "buynow_sold": 31,
     "buynow_total": 360,
-    "auctions_total": 118,
+    "auctions_total": 119,
     "archives_count": 0,
     "buynow_emirates": [
       "rak",
