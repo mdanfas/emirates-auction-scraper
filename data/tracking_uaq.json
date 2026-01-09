@@ -3,7 +3,7 @@
   "emirate": "uaq",
   "display_name": "Umm Al Quwain",
   "start_date": "2025-12-27T07:21:25.562655Z",
-  "last_updated": "2026-01-09T19:41:43.788638Z",
+  "last_updated": "2026-01-09T19:43:28.678342Z",
   "status": "active",
   "plates": {
     "7701": {
@@ -12,7 +12,7 @@
       "current_price": 81000,
       "bid_count": 110,
       "first_seen": "2025-12-27T07:21:26.382646Z",
-      "last_seen": "2026-01-09T19:41:43.788528Z",
+      "last_seen": "2026-01-09T19:43:28.678248Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1009,9 +1009,9 @@
       "bid_count": 97,
       "first_seen": "2025-12-27T07:21:26.382646Z",
       "last_seen": "2026-01-09T19:41:43.788528Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 159500,
+      "completed_at": "2026-01-09T19:43:28.678248Z",
       "price_history": [
         {
           "price": 10000,
@@ -2196,7 +2196,7 @@
       "current_price": 426000,
       "bid_count": 66,
       "first_seen": "2025-12-27T07:21:26.382646Z",
-      "last_seen": "2026-01-09T19:41:43.788528Z",
+      "last_seen": "2026-01-09T19:43:28.678248Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -3570,10 +3570,10 @@
     "7682": {
       "plate_number": "5000",
       "plate_code": "N",
-      "current_price": 140500,
-      "bid_count": 63,
+      "current_price": 141000,
+      "bid_count": 64,
       "first_seen": "2025-12-27T07:21:26.382646Z",
-      "last_seen": "2026-01-09T19:41:43.788528Z",
+      "last_seen": "2026-01-09T19:43:28.678248Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -3709,6 +3709,10 @@
         {
           "price": 140500,
           "timestamp": "2026-01-09T19:41:43.788528Z"
+        },
+        {
+          "price": 141000,
+          "timestamp": "2026-01-09T19:43:28.678248Z"
         }
       ]
     },
@@ -6571,7 +6575,7 @@
       "current_price": 34400,
       "bid_count": 130,
       "first_seen": "2025-12-27T07:21:26.382646Z",
-      "last_seen": "2026-01-09T19:41:43.788528Z",
+      "last_seen": "2026-01-09T19:43:28.678248Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -6849,7 +6853,7 @@
   },
   "stats": {
     "total_plates_seen": 40,
-    "completed_plates": 35,
-    "active_plates": 5
+    "completed_plates": 36,
+    "active_plates": 4
   }
 }
