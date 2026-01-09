@@ -3,7 +3,7 @@
   "emirate": "uaq",
   "display_name": "Umm Al Quwain",
   "start_date": "2025-12-27T07:21:25.562655Z",
-  "last_updated": "2026-01-09T19:57:09.475060Z",
+  "last_updated": "2026-01-09T19:58:07.531453Z",
   "status": "active",
   "plates": {
     "7701": {
@@ -12,7 +12,7 @@
       "current_price": 82500,
       "bid_count": 113,
       "first_seen": "2025-12-27T07:21:26.382646Z",
-      "last_seen": "2026-01-09T19:57:09.474966Z",
+      "last_seen": "2026-01-09T19:58:07.531363Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -6588,9 +6588,9 @@
       "bid_count": 134,
       "first_seen": "2025-12-27T07:21:26.382646Z",
       "last_seen": "2026-01-09T19:57:09.474966Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 35200,
+      "completed_at": "2026-01-09T19:58:07.531363Z",
       "price_history": [
         {
           "price": 2000,
@@ -6873,7 +6873,7 @@
   },
   "stats": {
     "total_plates_seen": 40,
-    "completed_plates": 38,
-    "active_plates": 2
+    "completed_plates": 39,
+    "active_plates": 1
   }
 }
