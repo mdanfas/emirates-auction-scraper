@@ -11,6 +11,9 @@ interface Plate {
   status: string;
   bid_count?: number;
   sold_at?: string;
+  first_seen?: string;
+  completed_at?: string;
+  price_history?: { price: number; timestamp: string }[];
 }
 
 interface BuyNowEmirate {
@@ -40,6 +43,10 @@ interface ArchiveEntry {
   plates: Plate[];
   count: number;
   total_value: number;
+  sold_count?: number;
+  auction_id?: string;
+  start_date?: string;
+  archived_at?: string;
 }
 
 interface DashboardData {
@@ -47,12 +54,16 @@ interface DashboardData {
   buynow: Record<string, BuyNowEmirate>;
   auctions: Record<string, AuctionEmirate>;
   archives: ArchiveEntry[];
+  archived_buynow: ArchiveEntry[];
+  archived_tracking: ArchiveEntry[];
   summary: {
     buynow_available: number;
     buynow_sold: number;
     buynow_total: number;
     auctions_total: number;
     archives_count: number;
+    archived_buynow_count: number;
+    archived_tracking_count: number;
   };
 }
 
@@ -71,11 +82,70 @@ function formatDate(dateStr: string): string {
   });
 }
 
+function PlateDetailModal({ plate, onClose }: { plate: Plate; onClose: () => void }) {
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm" onClick={onClose}>
+      <div className="bg-[#12121a] border border-white/10 rounded-2xl p-6 max-w-lg w-full mx-4 max-h-[80vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-2xl font-bold font-mono">{plate.plate_number}</h3>
+            <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">{plate.plate_code}</span>
+          </div>
+          <button onClick={onClose} className="text-gray-400 hover:text-white text-2xl">&times;</button>
+        </div>
+
+        <div className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-white/5 rounded-lg p-3">
+              <p className="text-gray-400 text-sm">Final Price</p>
+              <p className="text-emerald-400 text-xl font-semibold">AED {formatPrice(plate.final_price || plate.price)}</p>
+            </div>
+            <div className="bg-white/5 rounded-lg p-3">
+              <p className="text-gray-400 text-sm">Bids</p>
+              <p className="text-white text-xl font-semibold">{plate.bid_count || 0}</p>
+            </div>
+          </div>
+
+          {plate.first_seen && (
+            <div className="bg-white/5 rounded-lg p-3">
+              <p className="text-gray-400 text-sm">First Seen</p>
+              <p className="text-white">{formatDate(plate.first_seen)}</p>
+            </div>
+          )}
+
+          {plate.completed_at && (
+            <div className="bg-white/5 rounded-lg p-3">
+              <p className="text-gray-400 text-sm">Completed At</p>
+              <p className="text-white">{formatDate(plate.completed_at)}</p>
+            </div>
+          )}
+
+          {plate.price_history && plate.price_history.length > 0 && (
+            <div className="bg-white/5 rounded-lg p-3">
+              <p className="text-gray-400 text-sm mb-2">Price History ({plate.price_history.length} updates)</p>
+              <div className="space-y-1 max-h-40 overflow-y-auto">
+                {plate.price_history.map((h, i) => (
+                  <div key={i} className="flex justify-between text-sm">
+                    <span className="text-emerald-400">AED {formatPrice(h.price)}</span>
+                    <span className="text-gray-500">{formatDate(h.timestamp)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Dashboard() {
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'auctions' | 'buynow' | 'history'>('buynow');
-  const [historyView, setHistoryView] = useState<'archives' | 'sold'>('sold');
+  const [historyView, setHistoryView] = useState<'sold' | 'archived_buynow' | 'archived_auctions'>('archived_auctions');
+  const [selectedPlate, setSelectedPlate] = useState<Plate | null>(null);
+  const [expandedArchive, setExpandedArchive] = useState<string | null>(null);
 
   useEffect(() => {
     const GITHUB_RAW = 'https://raw.githubusercontent.com/mdanfas/emirates-auction-scraper/main/dashboard/public/data.json';
@@ -111,9 +181,15 @@ export default function Dashboard() {
   const auctionsList = Object.values(data.auctions || {});
   const buynowList = Object.values(data.buynow || {});
   const soldPlates = buynowList.flatMap(e => e.sold.map(p => ({ ...p, emirate: e.emirate })));
+  const archivedTracking = data.archived_tracking || [];
+  const archivedBuynow = data.archived_buynow || [];
+
+  const historyCount = soldPlates.length + archivedTracking.length + archivedBuynow.length;
 
   return (
     <main className="min-h-screen bg-[#0a0a0f] text-white">
+      {selectedPlate && <PlateDetailModal plate={selectedPlate} onClose={() => setSelectedPlate(null)} />}
+
       {/* Header */}
       <header className="sticky top-0 z-50 bg-[#0a0a0f]/95 backdrop-blur-sm border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 py-4">
@@ -152,7 +228,7 @@ export default function Dashboard() {
           >
             📜 History
             <span className="ml-2 px-2 py-0.5 rounded-full bg-white/10 text-xs">
-              {data.summary.buynow_sold + data.summary.archives_count}
+              {historyCount}
             </span>
           </button>
         </div>
@@ -165,7 +241,7 @@ export default function Dashboard() {
             {auctionsList.length === 0 ? (
               <div className="text-center py-12 text-gray-400">
                 <p className="text-xl mb-2">No active auctions</p>
-                <p className="text-sm">Check back later</p>
+                <p className="text-sm">Check back later or view History for past auctions</p>
               </div>
             ) : (
               auctionsList.map((auction) => (
@@ -191,7 +267,7 @@ export default function Dashboard() {
                       </thead>
                       <tbody className="divide-y divide-white/5">
                         {auction.plates.slice(0, 50).map((plate, idx) => (
-                          <tr key={idx} className="hover:bg-white/5">
+                          <tr key={idx} className="hover:bg-white/5 cursor-pointer" onClick={() => setSelectedPlate(plate)}>
                             <td className="py-3 px-4 font-mono text-lg font-bold">{plate.plate_number}</td>
                             <td className="py-3 px-4">
                               <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-sm">{plate.plate_code}</span>
@@ -212,30 +288,37 @@ export default function Dashboard() {
         {/* Buy Now */}
         {activeTab === 'buynow' && (
           <div className="space-y-6">
-            {buynowList.map((emirateData) => (
-              <div key={emirateData.emirate} className="rounded-xl border border-white/10 overflow-hidden">
-                <div className="bg-white/5 px-4 py-3 flex justify-between items-center">
-                  <div>
-                    <h3 className="font-semibold text-lg">{emirateData.emirate}</h3>
-                    <p className="text-xs text-gray-500">Updated: {formatDate(emirateData.lastUpdated)}</p>
-                  </div>
-                  <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">
-                    {emirateData.available_count} available
-                  </span>
-                </div>
-                <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
-                  {emirateData.available.map((plate, idx) => (
-                    <div key={idx} className="p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5">
-                      <div className="flex justify-between items-start mb-2">
-                        <span className="font-mono text-lg font-bold">{plate.plate_number}</span>
-                        <span className="px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">{plate.plate_code}</span>
-                      </div>
-                      <div className="text-emerald-400 font-semibold">AED {formatPrice(plate.price)}</div>
-                    </div>
-                  ))}
-                </div>
+            {buynowList.length === 0 ? (
+              <div className="text-center py-12 text-gray-400">
+                <p className="text-xl mb-2">No Buy Now plates</p>
+                <p className="text-sm">Check back later</p>
               </div>
-            ))}
+            ) : (
+              buynowList.map((emirateData) => (
+                <div key={emirateData.emirate} className="rounded-xl border border-white/10 overflow-hidden">
+                  <div className="bg-white/5 px-4 py-3 flex justify-between items-center">
+                    <div>
+                      <h3 className="font-semibold text-lg">{emirateData.emirate}</h3>
+                      <p className="text-xs text-gray-500">Updated: {formatDate(emirateData.lastUpdated)}</p>
+                    </div>
+                    <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-sm">
+                      {emirateData.available_count} available
+                    </span>
+                  </div>
+                  <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">
+                    {emirateData.available.map((plate, idx) => (
+                      <div key={idx} className="p-3 rounded-lg bg-white/5 hover:bg-white/10 border border-white/5 cursor-pointer" onClick={() => setSelectedPlate(plate)}>
+                        <div className="flex justify-between items-start mb-2">
+                          <span className="font-mono text-lg font-bold">{plate.plate_number}</span>
+                          <span className="px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">{plate.plate_code}</span>
+                        </div>
+                        <div className="text-emerald-400 font-semibold">AED {formatPrice(plate.price)}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))
+            )}
           </div>
         )}
 
@@ -243,24 +326,145 @@ export default function Dashboard() {
         {activeTab === 'history' && (
           <div>
             {/* Sub-tabs */}
-            <div className="flex gap-2 mb-6">
+            <div className="flex gap-2 mb-6 overflow-x-auto pb-2">
               <button
-                onClick={() => setHistoryView('sold')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium ${historyView === 'sold' ? 'bg-purple-500 text-white' : 'bg-white/10 text-gray-400'
+                onClick={() => setHistoryView('archived_auctions')}
+                className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${historyView === 'archived_auctions' ? 'bg-purple-500 text-white' : 'bg-white/10 text-gray-400'
                   }`}
               >
-                Sold Plates ({data.summary.buynow_sold})
+                📊 Past Auctions ({archivedTracking.length})
               </button>
               <button
-                onClick={() => setHistoryView('archives')}
-                className={`px-4 py-2 rounded-lg text-sm font-medium ${historyView === 'archives' ? 'bg-purple-500 text-white' : 'bg-white/10 text-gray-400'
+                onClick={() => setHistoryView('archived_buynow')}
+                className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${historyView === 'archived_buynow' ? 'bg-purple-500 text-white' : 'bg-white/10 text-gray-400'
                   }`}
               >
-                Past Auctions ({data.summary.archives_count})
+                🛒 Buy Now Archives ({archivedBuynow.length})
+              </button>
+              <button
+                onClick={() => setHistoryView('sold')}
+                className={`px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap ${historyView === 'sold' ? 'bg-purple-500 text-white' : 'bg-white/10 text-gray-400'
+                  }`}
+              >
+                💰 Recently Sold ({soldPlates.length})
               </button>
             </div>
 
-            {/* Sold Plates */}
+            {/* Archived Auctions */}
+            {historyView === 'archived_auctions' && (
+              <div className="space-y-4">
+                {archivedTracking.length === 0 ? (
+                  <div className="text-center py-12 text-gray-400">
+                    <p className="text-xl mb-2">No archived auctions yet</p>
+                    <p className="text-sm">Completed auctions will appear here with full price history</p>
+                  </div>
+                ) : (
+                  archivedTracking.map((archive, idx) => (
+                    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden">
+                      <div
+                        className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 px-4 py-3 flex justify-between items-center cursor-pointer"
+                        onClick={() => setExpandedArchive(expandedArchive === archive.filename ? null : archive.filename)}
+                      >
+                        <div>
+                          <h3 className="font-semibold text-lg">{archive.emirate}</h3>
+                          <p className="text-xs text-gray-500">
+                            {archive.auction_id} • Archived: {formatDate(archive.archived_at || archive.date)}
+                          </p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-emerald-400 font-semibold">AED {formatPrice(archive.total_value)}</p>
+                          <p className="text-xs text-gray-500">{archive.count} plates</p>
+                        </div>
+                      </div>
+                      {expandedArchive === archive.filename && (
+                        <div className="p-4">
+                          <div className="overflow-x-auto">
+                            <table className="w-full">
+                              <thead className="bg-white/5">
+                                <tr>
+                                  <th className="text-left py-2 px-3 text-xs text-gray-400">Plate</th>
+                                  <th className="text-left py-2 px-3 text-xs text-gray-400">Code</th>
+                                  <th className="text-right py-2 px-3 text-xs text-gray-400">Final Price</th>
+                                  <th className="text-right py-2 px-3 text-xs text-gray-400">Bids</th>
+                                  <th className="text-right py-2 px-3 text-xs text-gray-400">History</th>
+                                </tr>
+                              </thead>
+                              <tbody className="divide-y divide-white/5">
+                                {archive.plates.map((plate, pidx) => (
+                                  <tr key={pidx} className="hover:bg-white/5 cursor-pointer" onClick={() => setSelectedPlate(plate)}>
+                                    <td className="py-2 px-3 font-mono font-bold">{plate.plate_number}</td>
+                                    <td className="py-2 px-3">
+                                      <span className="px-2 py-0.5 bg-blue-500/20 text-blue-400 rounded text-xs">{plate.plate_code}</span>
+                                    </td>
+                                    <td className="py-2 px-3 text-right text-emerald-400 font-semibold">AED {formatPrice(plate.final_price || 0)}</td>
+                                    <td className="py-2 px-3 text-right text-gray-400">{plate.bid_count}</td>
+                                    <td className="py-2 px-3 text-right">
+                                      {plate.price_history && plate.price_history.length > 1 && (
+                                        <span className="text-xs text-purple-400">{plate.price_history.length} updates</span>
+                                      )}
+                                    </td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  ))
+                )}
+              </div>
+            )}
+
+            {/* Archived Buy Now */}
+            {historyView === 'archived_buynow' && (
+              <div className="space-y-4">
+                {archivedBuynow.length === 0 ? (
+                  <div className="text-center py-12 text-gray-400">
+                    <p className="text-xl mb-2">No archived Buy Now data yet</p>
+                    <p className="text-sm">When all plates are sold or listing is cleared, data will be archived here</p>
+                  </div>
+                ) : (
+                  archivedBuynow.map((archive, idx) => (
+                    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden">
+                      <div
+                        className="bg-gradient-to-r from-emerald-500/10 to-teal-500/10 px-4 py-3 flex justify-between items-center cursor-pointer"
+                        onClick={() => setExpandedArchive(expandedArchive === archive.filename ? null : archive.filename)}
+                      >
+                        <div>
+                          <h3 className="font-semibold text-lg">{archive.emirate}</h3>
+                          <p className="text-xs text-gray-500">Archived: {archive.date}</p>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-emerald-400 font-semibold">AED {formatPrice(archive.total_value)}</p>
+                          <p className="text-xs text-gray-500">{archive.count} plates • {archive.sold_count || 0} sold</p>
+                        </div>
+                      </div>
+                      {expandedArchive === archive.filename && (
+                        <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                          {archive.plates.map((plate, pidx) => (
+                            <div
+                              key={pidx}
+                              className={`p-2 rounded ${plate.status === 'sold' ? 'bg-red-500/10 border border-red-500/20' : 'bg-white/5'}`}
+                              onClick={() => setSelectedPlate(plate)}
+                            >
+                              <div className="flex justify-between items-start">
+                                <span className="font-mono font-bold">{plate.plate_number}</span>
+                                <span className="text-xs text-gray-500">{plate.plate_code}</span>
+                              </div>
+                              <div className="text-emerald-400 text-sm">AED {formatPrice(plate.price)}</div>
+                              {plate.status === 'sold' && <span className="text-xs text-red-400">Sold</span>}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))
+                )}
+              </div>
+            )}
+
+            {/* Recently Sold */}
             {historyView === 'sold' && (
               <div>
                 {soldPlates.length === 0 ? (
@@ -293,47 +497,6 @@ export default function Dashboard() {
                       </tbody>
                     </table>
                   </div>
-                )}
-              </div>
-            )}
-
-            {/* Past Auctions */}
-            {historyView === 'archives' && (
-              <div className="space-y-4">
-                {data.archives.length === 0 ? (
-                  <div className="text-center py-12 text-gray-400">
-                    <p>No archived auctions yet</p>
-                    <p className="text-sm">Completed auctions will appear here</p>
-                  </div>
-                ) : (
-                  data.archives.map((archive, idx) => (
-                    <div key={idx} className="rounded-xl border border-white/10 overflow-hidden">
-                      <div className="bg-white/5 px-4 py-3 flex justify-between items-center">
-                        <div>
-                          <h3 className="font-semibold">{archive.emirate}</h3>
-                          <p className="text-xs text-gray-500">{archive.date}</p>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-emerald-400 font-semibold">AED {formatPrice(archive.total_value)}</p>
-                          <p className="text-xs text-gray-500">{archive.count} plates</p>
-                        </div>
-                      </div>
-                      <div className="p-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
-                        {archive.plates.slice(0, 12).map((plate, pidx) => (
-                          <div key={pidx} className="p-2 rounded bg-white/5 text-sm">
-                            <span className="font-mono font-bold">{plate.plate_number}</span>
-                            <span className="text-gray-400 ml-1">({plate.plate_code})</span>
-                            <div className="text-emerald-400">AED {formatPrice(plate.final_price || 0)}</div>
-                          </div>
-                        ))}
-                        {archive.plates.length > 12 && (
-                          <div className="p-2 rounded bg-white/5 text-sm text-gray-400 flex items-center justify-center">
-                            +{archive.plates.length - 12} more
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  ))
                 )}
               </div>
             )}
