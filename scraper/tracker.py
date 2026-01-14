@@ -168,11 +168,41 @@ class AuctionTracker:
         self.state["csv_generated"] = csv_path
         return csv_path
 
-    def reset_for_new_auction(self):
-        """Archive current state and reset for new auction"""
+    def archive_completed_auction(self) -> dict:
+        """
+        Archive the completed auction data.
+        Called when all plates in the auction have completed.
+        
+        Returns dict with archive paths for CSV and JSON.
+        """
+        os.makedirs(ARCHIVE_DIR, exist_ok=True)
+        date_str = datetime.utcnow().strftime("%Y-%m-%d")
+        timestamp_str = datetime.utcnow().strftime("%Y-%m-%d_%H%M%S")
+        
+        # Generate final CSV
+        csv_path = self.generate_final_csv()
+        
+        # Archive the tracking JSON
+        json_archive_path = os.path.join(ARCHIVE_DIR, f"tracking_{self.emirate}_{timestamp_str}.json")
         if os.path.exists(self.tracking_file):
-            archive_path = os.path.join(ARCHIVE_DIR, f"tracking_{self.emirate}_{datetime.utcnow().strftime('%Y-%m-%d_%H%M%S')}.json")
-            os.makedirs(ARCHIVE_DIR, exist_ok=True)
-            os.rename(self.tracking_file, archive_path)
+            # Save final state before archiving
+            self.state["status"] = "archived"
+            self.state["archived_at"] = datetime.utcnow().isoformat() + "Z"
+            self.save_state()
+            
+            os.rename(self.tracking_file, json_archive_path)
+        
+        # Create fresh state for next auction
+        self.state = self._create_new_state()
+        self.save_state()
+        
+        return {
+            "csv_path": csv_path,
+            "json_path": json_archive_path,
+            "archived_at": datetime.utcnow().isoformat() + "Z"
+        }
+
+    def reset_for_new_auction(self):
+        """Reset tracking for new auction (use archive_completed_auction if auction completed)"""
         self.state = self._create_new_state()
         self.save_state()

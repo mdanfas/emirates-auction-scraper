@@ -55,10 +55,10 @@ def scrape_emirate(emirate: str) -> dict:
     
     if tracker.is_auction_complete():
         print(f"🎉 ALL PLATES COMPLETED for {display_name}!")
-        csv_path = tracker.generate_final_csv()
-        tracker.save_state()
-        print(f"Final CSV: {csv_path}")
-        return {"emirate": emirate, "status": "completed", "csv_path": csv_path, "should_continue": False, "rapid_mode": False}
+        archive_result = tracker.archive_completed_auction()
+        print(f"📦 Archived: CSV at {archive_result['csv_path']}")
+        print(f"📦 Archived: JSON at {archive_result['json_path']}")
+        return {"emirate": emirate, "status": "completed", "archive": archive_result, "should_continue": False, "rapid_mode": False}
     
     return {
         "emirate": emirate,

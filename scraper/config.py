@@ -68,6 +68,7 @@ FINAL_HOURS_THRESHOLD_MINUTES = 120  # 2 hours - switch to rapid mode
 DATA_DIR = "data"
 ARCHIVE_DIR = f"{DATA_DIR}/archive"
 BUYNOW_DIR = f"{DATA_DIR}/buynow"
+BUYNOW_ARCHIVE_DIR = f"{ARCHIVE_DIR}/buynow"
 
 # Request settings
 REQUEST_TIMEOUT = 30

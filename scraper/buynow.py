@@ -11,6 +11,7 @@ from .config import (
     EMIRATES_CONFIG,
     BUYNOW_EMIRATES,
     BUYNOW_DIR,
+    BUYNOW_ARCHIVE_DIR,
     PLATES_BUYNOW_ENDPOINT,
     REQUEST_TIMEOUT,
     USER_AGENT,
@@ -125,11 +126,11 @@ class BuyNowScraper:
             print(f"Error parsing plate: {e}")
             return None
 
-    def save_to_csv(self, plates: List[Dict]) -> str:
+    def save_to_csv(self, plates: List[Dict]) -> dict:
         """
         Save plates to CSV file for this emirate.
         
-        Returns: path to CSV file
+        Returns: dict with csv_path, should_archive flag, and stats
         """
         os.makedirs(BUYNOW_DIR, exist_ok=True)
         
@@ -138,12 +139,17 @@ class BuyNowScraper:
         
         # Load existing plates to track history
         existing_plates = {}
+        had_existing_data = False
         if os.path.exists(csv_path):
             with open(csv_path, "r", encoding="utf-8") as f:
                 reader = csv.DictReader(f)
                 for row in reader:
                     key = f"{row['plate_code']}_{row['plate_number']}"
                     existing_plates[key] = row
+                    had_existing_data = True
+        
+        # Count available plates before update
+        available_before = sum(1 for p in existing_plates.values() if p.get("status") == "available")
         
         # Update with new plates
         for plate in plates:
@@ -175,6 +181,12 @@ class BuyNowScraper:
                 data["status"] = "sold"
                 data["sold_at"] = timestamp
         
+        # Check archive conditions
+        available_after = sum(1 for p in existing_plates.values() if p.get("status") == "available")
+        all_sold = had_existing_data and available_after == 0
+        list_empty = had_existing_data and len(plates) == 0
+        should_archive = all_sold or list_empty
+        
         # Write CSV
         with open(csv_path, "w", newline="", encoding="utf-8") as f:
             fieldnames = ["emirate", "plate_number", "plate_code", "price", "first_seen", "last_seen", "status", "sold_at"]
@@ -189,7 +201,36 @@ class BuyNowScraper:
             for plate in sorted_plates:
                 writer.writerow(plate)
         
-        return csv_path
+        return {
+            "csv_path": csv_path,
+            "should_archive": should_archive,
+            "available_before": available_before,
+            "available_after": available_after,
+            "total_plates": len(existing_plates),
+            "archive_reason": "all_sold" if all_sold else ("list_empty" if list_empty else None)
+        }
+
+    def archive_buynow_data(self) -> Optional[str]:
+        """
+        Archive the Buy Now CSV file to archive directory.
+        Called when all plates are sold or list goes empty.
+        
+        Returns: archive path or None if no file to archive
+        """
+        csv_path = get_buynow_file(self.emirate)
+        if not os.path.exists(csv_path):
+            return None
+        
+        os.makedirs(BUYNOW_ARCHIVE_DIR, exist_ok=True)
+        timestamp_str = datetime.utcnow().strftime("%Y-%m-%d_%H%M%S")
+        archive_path = os.path.join(BUYNOW_ARCHIVE_DIR, f"{self.emirate}_buynow_{timestamp_str}.csv")
+        
+        # Copy to archive (keep original for tracking new plates)
+        import shutil
+        shutil.copy(csv_path, archive_path)
+        
+        print(f"📦 Archived Buy Now data to: {archive_path}")
+        return archive_path
 
 
 def scrape_buynow_emirate(emirate: str) -> dict:
@@ -210,12 +251,14 @@ def scrape_buynow_emirate(emirate: str) -> dict:
     data = scraper.fetch_plates()
     
     plate_count = data.get("total_count", 0)
-    print(f"Found {plate_count} plates")
+    print(f"Found {plate_count} plates from API")
+    
+    # Always call save_to_csv to track sold plates even when list is empty
+    save_result = scraper.save_to_csv(data.get("plates", []))
+    print(f"Saved to: {save_result['csv_path']}")
+    print(f"Available: {save_result['available_after']} / Total tracked: {save_result['total_plates']}")
     
     if plate_count > 0:
-        csv_path = scraper.save_to_csv(data["plates"])
-        print(f"Saved to: {csv_path}")
-        
         # Show sample
         for plate in data["plates"][:5]:
             print(f"  - Plate {plate['plate_number']} ({plate['plate_code']}): AED {plate['price']:,}")
@@ -224,10 +267,21 @@ def scrape_buynow_emirate(emirate: str) -> dict:
     else:
         print(f"No Buy Now plates currently available for {display_name}")
     
+    # Check if we should archive (all sold or list empty)
+    archive_path = None
+    if save_result.get("should_archive"):
+        reason = save_result.get("archive_reason", "unknown")
+        print(f"🎉 ARCHIVE TRIGGERED: {reason}")
+        archive_path = scraper.archive_buynow_data()
+    
     return {
         "emirate": emirate,
         "status": "success" if plate_count > 0 else "empty",
         "count": plate_count,
+        "available": save_result.get("available_after", 0),
+        "total_tracked": save_result.get("total_plates", 0),
+        "archived": archive_path is not None,
+        "archive_path": archive_path,
     }
 
 
