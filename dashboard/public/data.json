@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-16T20:55:39.333501Z",
+  "generated_at": "2026-01-16T20:58:15.229381Z",
   "buynow": {
     "rak": {
       "emirate": "Ras Al Khaimah",
@@ -3458,7 +3458,7 @@
       "auction_id": "abudhabi_2026-01",
       "emirate": "Abu Dhabi",
       "start_date": "2026-01-16T17:22:06.441887Z",
-      "last_updated": "2026-01-16T20:55:37.386795Z",
+      "last_updated": "2026-01-16T20:58:12.869919Z",
       "status": "active",
       "plates": [
         {
@@ -3755,7 +3755,7 @@
           "plate_code": "22",
           "price": 210500,
           "bid_count": 145,
-          "status": "active"
+          "status": "completed"
         },
         {
           "id": "25621",
@@ -4830,6 +4830,14 @@
           "status": "active"
         },
         {
+          "id": "25995",
+          "plate_number": "19191",
+          "plate_code": "18",
+          "price": 68500,
+          "bid_count": 9,
+          "status": "active"
+        },
+        {
           "id": "25967",
           "plate_number": "8887",
           "plate_code": "50",
@@ -5268,14 +5276,6 @@
           "price": 39000,
           "bid_count": 57,
           "status": "completed"
-        },
-        {
-          "id": "25995",
-          "plate_number": "19191",
-          "plate_code": "18",
-          "price": 39000,
-          "bid_count": 8,
-          "status": "active"
         },
         {
           "id": "25903",
@@ -5798,6 +5798,14 @@
           "status": "completed"
         },
         {
+          "id": "25998",
+          "plate_number": "20021",
+          "plate_code": "22",
+          "price": 5000,
+          "bid_count": 8,
+          "status": "active"
+        },
+        {
           "id": "25983",
           "plate_number": "10711",
           "plate_code": "17",
@@ -5806,7 +5814,7 @@
           "status": "active"
         }
       ],
-      "count": 293
+      "count": 294
     },
     "sharjah": {
       "auction_id": "sharjah_2026-01",
@@ -37877,7 +37885,7 @@
     "buynow_available": 320,
     "buynow_sold": 56,
     "buynow_total": 376,
-    "auctions_total": 293,
+    "auctions_total": 294,
     "archives_count": 4,
     "archived_buynow_count": 0,
     "archived_tracking_count": 6,
