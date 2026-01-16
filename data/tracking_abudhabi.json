@@ -2,6 +2,7 @@
   "auction_id": "abudhabi_2026-01",
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
+<<<<<<< HEAD
   "start_date": "2026-01-09T21:24:03.007268Z",
   "last_updated": "2026-01-16T17:18:12.303491Z",
   "status": "active",
@@ -35998,5 +35999,15 @@
     "total_plates_seen": 355,
     "completed_plates": 238,
     "active_plates": 117
+=======
+  "start_date": "2026-01-16T17:13:37.637762Z",
+  "last_updated": "2026-01-16T17:13:37.639642Z",
+  "status": "active",
+  "plates": {},
+  "stats": {
+    "total_plates_seen": 0,
+    "completed_plates": 0,
+    "active_plates": 0
+>>>>>>> a7e1a33 (fix: auto-archive stale auctions when API reports no active auction)
   }
 }

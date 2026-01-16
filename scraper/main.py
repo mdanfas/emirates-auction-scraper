@@ -37,6 +37,20 @@ def scrape_emirate(emirate: str) -> dict:
     
     if not api_data.get("is_active", False):
         print(f"No active auction for {display_name}")
+        
+        # Check if we have a stale active state that needs cleanup
+        if tracker.state.get("status") == "active" and tracker.state.get("plates"):
+            print("  ⚠️ Active tracking found but API reports no auction. Closing all plates...")
+            # Passing empty plates list causes update_from_api to mark all existing active plates as completed
+            tracker.update_from_api({"plates": []})
+            tracker.save_state()
+            
+            if tracker.is_auction_complete():
+                print(f"  🎉 Auto-archiving completed auction for {display_name}")
+                archive_result = tracker.archive_completed_auction()
+                print(f"  📦 Archived to {archive_result['csv_path']}")
+                return {"emirate": emirate, "status": "completed", "archive": archive_result, "should_continue": False, "rapid_mode": False}
+                
         return {"emirate": emirate, "status": "no_auction", "should_continue": False, "rapid_mode": False}
     
     plate_count = len(api_data.get("plates", []))
