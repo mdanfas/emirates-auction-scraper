@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-01-17T20:31:03.289857Z",
-  "last_updated": "2026-01-17T21:21:03.312575Z",
+  "last_updated": "2026-01-17T21:22:59.340888Z",
   "status": "active",
   "plates": {
     "25859": {
@@ -157,10 +157,10 @@
     "25970": {
       "plate_number": "9070",
       "plate_code": "20",
-      "current_price": 148000,
-      "bid_count": 101,
+      "current_price": 149000,
+      "bid_count": 103,
       "first_seen": "2026-01-17T20:32:29.594708Z",
-      "last_seen": "2026-01-17T21:21:03.312501Z",
+      "last_seen": "2026-01-17T21:22:59.340837Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -200,6 +200,10 @@
         {
           "price": 148000,
           "timestamp": "2026-01-17T21:15:42.290588Z"
+        },
+        {
+          "price": 149000,
+          "timestamp": "2026-01-17T21:22:59.340837Z"
         }
       ]
     },
