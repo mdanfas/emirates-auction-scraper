@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-01-16T17:22:06.441887Z",
-  "last_updated": "2026-01-17T19:52:50.268213Z",
+  "last_updated": "2026-01-17T19:54:40.991320Z",
   "status": "active",
   "plates": {
     "25695": {
@@ -41120,7 +41120,7 @@
       "current_price": 117000,
       "bid_count": 88,
       "first_seen": "2026-01-17T16:27:49.585061Z",
-      "last_seen": "2026-01-17T19:52:50.267845Z",
+      "last_seen": "2026-01-17T19:54:40.990922Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -41333,7 +41333,7 @@
       "current_price": 172500,
       "bid_count": 97,
       "first_seen": "2026-01-17T16:29:20.779207Z",
-      "last_seen": "2026-01-17T19:52:50.267845Z",
+      "last_seen": "2026-01-17T19:54:40.990922Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -42301,7 +42301,7 @@
       "current_price": 118500,
       "bid_count": 78,
       "first_seen": "2026-01-17T16:43:18.761854Z",
-      "last_seen": "2026-01-17T19:52:50.267845Z",
+      "last_seen": "2026-01-17T19:54:40.990922Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -42950,9 +42950,9 @@
       "bid_count": 81,
       "first_seen": "2026-01-17T16:48:08.499998Z",
       "last_seen": "2026-01-17T19:52:50.267845Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 78500,
+      "completed_at": "2026-01-17T19:54:40.990922Z",
       "price_history": [
         {
           "price": 50000,
@@ -43267,7 +43267,7 @@
       "current_price": 180500,
       "bid_count": 121,
       "first_seen": "2026-01-17T16:48:08.499998Z",
-      "last_seen": "2026-01-17T19:52:50.267845Z",
+      "last_seen": "2026-01-17T19:54:40.990922Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -43900,7 +43900,7 @@
   },
   "stats": {
     "total_plates_seen": 423,
-    "completed_plates": 418,
-    "active_plates": 5
+    "completed_plates": 419,
+    "active_plates": 4
   }
 }
