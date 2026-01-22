@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-01-16T17:13:37.659039Z",
-  "last_updated": "2026-01-22T18:44:55.978843Z",
+  "last_updated": "2026-01-22T18:46:11.898670Z",
   "status": "active",
   "plates": {
     "611842": {
@@ -873,10 +873,10 @@
     "611896": {
       "plate_number": "9780",
       "plate_code": "A",
-      "current_price": 72200,
-      "bid_count": 166,
+      "current_price": 72300,
+      "bid_count": 167,
       "first_seen": "2026-01-21T13:50:40.164646Z",
-      "last_seen": "2026-01-22T18:44:55.978762Z",
+      "last_seen": "2026-01-22T18:46:11.898566Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1092,6 +1092,10 @@
         {
           "price": 72200,
           "timestamp": "2026-01-22T18:44:55.978762Z"
+        },
+        {
+          "price": 72300,
+          "timestamp": "2026-01-22T18:46:11.898566Z"
         }
       ]
     },
@@ -1172,10 +1176,10 @@
     "615002": {
       "plate_number": "418",
       "plate_code": "F",
-      "current_price": 591000,
-      "bid_count": 108,
+      "current_price": 592000,
+      "bid_count": 111,
       "first_seen": "2026-01-21T13:50:40.164646Z",
-      "last_seen": "2026-01-22T18:44:55.978762Z",
+      "last_seen": "2026-01-22T18:46:11.898566Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1347,6 +1351,10 @@
         {
           "price": 591000,
           "timestamp": "2026-01-22T18:44:55.978762Z"
+        },
+        {
+          "price": 592000,
+          "timestamp": "2026-01-22T18:46:11.898566Z"
         }
       ]
     },
@@ -1786,9 +1794,9 @@
       "bid_count": 72,
       "first_seen": "2026-01-21T13:50:40.164646Z",
       "last_seen": "2026-01-22T18:44:55.978762Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 13300,
+      "completed_at": "2026-01-22T18:46:11.898566Z",
       "price_history": [
         {
           "price": 4000,
@@ -2160,7 +2168,7 @@
   },
   "stats": {
     "total_plates_seen": 27,
-    "completed_plates": 24,
-    "active_plates": 3
+    "completed_plates": 25,
+    "active_plates": 2
   }
 }
