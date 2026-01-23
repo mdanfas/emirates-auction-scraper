@@ -3,7 +3,7 @@
   "emirate": "ajman",
   "display_name": "Ajman",
   "start_date": "2026-01-17T06:34:47.017612Z",
-  "last_updated": "2026-01-23T20:34:58.872535Z",
+  "last_updated": "2026-01-23T20:37:16.033782Z",
   "status": "active",
   "plates": {
     "3132": {
@@ -1765,9 +1765,9 @@
       "bid_count": 104,
       "first_seen": "2026-01-17T06:34:48.316305Z",
       "last_seen": "2026-01-23T20:34:58.872445Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 140500,
+      "completed_at": "2026-01-23T20:37:16.033687Z",
       "price_history": [
         {
           "price": 13000,
@@ -3454,7 +3454,7 @@
       "current_price": 39400,
       "bid_count": 76,
       "first_seen": "2026-01-17T06:34:48.316305Z",
-      "last_seen": "2026-01-23T20:34:58.872445Z",
+      "last_seen": "2026-01-23T20:37:16.033687Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -5511,7 +5511,7 @@
   },
   "stats": {
     "total_plates_seen": 30,
-    "completed_plates": 28,
-    "active_plates": 2
+    "completed_plates": 29,
+    "active_plates": 1
   }
 }
