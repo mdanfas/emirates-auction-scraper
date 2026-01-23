@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-23T19:05:11.320116Z",
+  "generated_at": "2026-01-23T19:07:24.121155Z",
   "buynow": {
     "rak": {
       "emirate": "Ras Al Khaimah",
@@ -3440,7 +3440,7 @@
       "auction_id": "ajman_2026-01",
       "emirate": "Ajman",
       "start_date": "2026-01-17T06:34:47.017612Z",
-      "last_updated": "2026-01-23T19:05:08.531342Z",
+      "last_updated": "2026-01-23T19:07:21.462147Z",
       "status": "active",
       "plates": [
         {
@@ -3455,8 +3455,16 @@
           "id": "3132",
           "plate_number": "65",
           "plate_code": "K",
-          "price": 557000,
-          "bid_count": 120,
+          "price": 564000,
+          "bid_count": 122,
+          "status": "active"
+        },
+        {
+          "id": "3129",
+          "plate_number": "310",
+          "plate_code": "H",
+          "price": 128500,
+          "bid_count": 106,
           "status": "active"
         },
         {
@@ -3481,14 +3489,6 @@
           "plate_code": "K",
           "price": 123500,
           "bid_count": 76,
-          "status": "active"
-        },
-        {
-          "id": "3129",
-          "plate_number": "310",
-          "plate_code": "H",
-          "price": 121500,
-          "bid_count": 99,
           "status": "active"
         },
         {
@@ -3559,8 +3559,8 @@
           "id": "3142",
           "plate_number": "9199",
           "plate_code": "K",
-          "price": 33600,
-          "bid_count": 48,
+          "price": 34000,
+          "bid_count": 50,
           "status": "active"
         },
         {
@@ -3628,20 +3628,20 @@
           "status": "completed"
         },
         {
+          "id": "3134",
+          "plate_number": "66166",
+          "plate_code": "H",
+          "price": 29500,
+          "bid_count": 44,
+          "status": "active"
+        },
+        {
           "id": "3151",
           "plate_number": "6066",
           "plate_code": "K",
           "price": 29400,
           "bid_count": 42,
           "status": "completed"
-        },
-        {
-          "id": "3134",
-          "plate_number": "66166",
-          "plate_code": "H",
-          "price": 29100,
-          "bid_count": 42,
-          "status": "active"
         },
         {
           "id": "3154",
