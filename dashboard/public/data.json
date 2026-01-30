@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-30T19:04:30.994186Z",
+  "generated_at": "2026-01-30T19:34:37.003442Z",
   "buynow": {
     "rak": {
       "emirate": "Ras Al Khaimah",
@@ -4169,10 +4169,19 @@
       "auction_id": "rak_2026-01",
       "emirate": "Ras Al Khaimah",
       "start_date": "2026-01-30T19:04:00.533062Z",
-      "last_updated": "2026-01-30T19:04:00.533134Z",
+      "last_updated": "2026-01-30T19:34:36.321010Z",
       "status": "active",
-      "plates": [],
-      "count": 0
+      "plates": [
+        {
+          "id": "1995",
+          "plate_number": "111",
+          "plate_code": "1",
+          "price": 165500,
+          "bid_count": 187,
+          "status": "active"
+        }
+      ],
+      "count": 1
     },
     "uaq": {
       "auction_id": "uaq_2026-01",
@@ -93521,7 +93530,7 @@
     "buynow_available": 190,
     "buynow_sold": 266,
     "buynow_total": 456,
-    "auctions_total": 0,
+    "auctions_total": 1,
     "archives_count": 8,
     "archived_buynow_count": 4,
     "archived_tracking_count": 12,
