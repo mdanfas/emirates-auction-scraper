@@ -3,7 +3,7 @@
   "emirate": "fujairah",
   "display_name": "Fujairah",
   "start_date": "2026-01-30T20:34:11.547960Z",
-  "last_updated": "2026-02-06T21:27:55.747294Z",
+  "last_updated": "2026-02-06T21:31:32.247294Z",
   "status": "active",
   "plates": {
     "3052": {
@@ -13,9 +13,9 @@
       "bid_count": 222,
       "first_seen": "2026-01-30T20:34:13.458252Z",
       "last_seen": "2026-02-06T21:27:55.747017Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 680000,
+      "completed_at": "2026-02-06T21:31:32.247016Z",
       "price_history": [
         {
           "price": 300000,
@@ -6134,10 +6134,10 @@
     "3105": {
       "plate_number": "6666",
       "plate_code": "L",
-      "current_price": 212500,
-      "bid_count": 165,
+      "current_price": 218000,
+      "bid_count": 168,
       "first_seen": "2026-01-30T20:34:13.458252Z",
-      "last_seen": "2026-02-06T21:27:55.747017Z",
+      "last_seen": "2026-02-06T21:31:32.247016Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -6453,6 +6453,10 @@
         {
           "price": 212500,
           "timestamp": "2026-02-06T21:27:55.747017Z"
+        },
+        {
+          "price": 218000,
+          "timestamp": "2026-02-06T21:31:32.247016Z"
         }
       ]
     },
@@ -8956,10 +8960,10 @@
     "3127": {
       "plate_number": "22220",
       "plate_code": "L",
-      "current_price": 46200,
-      "bid_count": 57,
+      "current_price": 46600,
+      "bid_count": 59,
       "first_seen": "2026-01-30T20:34:13.458252Z",
-      "last_seen": "2026-02-06T21:27:55.747017Z",
+      "last_seen": "2026-02-06T21:31:32.247016Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -9123,6 +9127,10 @@
         {
           "price": 46200,
           "timestamp": "2026-02-06T21:26:07.272478Z"
+        },
+        {
+          "price": 46600,
+          "timestamp": "2026-02-06T21:31:32.247016Z"
         }
       ]
     },
@@ -11861,7 +11869,7 @@
   },
   "stats": {
     "total_plates_seen": 100,
-    "completed_plates": 97,
-    "active_plates": 3
+    "completed_plates": 98,
+    "active_plates": 2
   }
 }
