@@ -3,7 +3,7 @@
   "emirate": "sharjah",
   "display_name": "Sharjah",
   "start_date": "2026-01-16T17:13:37.748254Z",
-  "last_updated": "2026-02-13T20:46:22.871113Z",
+  "last_updated": "2026-02-13T20:47:35.904737Z",
   "status": "active",
   "plates": {
     "1977": {
@@ -1073,7 +1073,7 @@
       "current_price": 1182000,
       "bid_count": 225,
       "first_seen": "2026-02-06T21:44:06.968639Z",
-      "last_seen": "2026-02-13T20:46:22.870998Z",
+      "last_seen": "2026-02-13T20:47:35.904647Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -8685,7 +8685,7 @@
       "current_price": 144000,
       "bid_count": 79,
       "first_seen": "2026-02-06T21:44:06.968639Z",
-      "last_seen": "2026-02-13T20:46:22.870998Z",
+      "last_seen": "2026-02-13T20:47:35.904647Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -9650,7 +9650,7 @@
       "current_price": 70000,
       "bid_count": 101,
       "first_seen": "2026-02-06T21:44:06.968639Z",
-      "last_seen": "2026-02-13T20:46:22.870998Z",
+      "last_seen": "2026-02-13T20:47:35.904647Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -9920,9 +9920,9 @@
       "bid_count": 119,
       "first_seen": "2026-02-06T21:44:06.968639Z",
       "last_seen": "2026-02-13T20:46:22.870998Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 300500,
+      "completed_at": "2026-02-13T20:47:35.904647Z",
       "price_history": [
         {
           "price": 30000,
@@ -10454,7 +10454,7 @@
       "current_price": 210000,
       "bid_count": 121,
       "first_seen": "2026-02-06T21:44:06.968639Z",
-      "last_seen": "2026-02-13T20:46:22.870998Z",
+      "last_seen": "2026-02-13T20:47:35.904647Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -10898,7 +10898,7 @@
   },
   "stats": {
     "total_plates_seen": 77,
-    "completed_plates": 72,
-    "active_plates": 5
+    "completed_plates": 73,
+    "active_plates": 4
   }
 }
