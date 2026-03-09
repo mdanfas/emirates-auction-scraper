@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-01-17T22:02:29.837983Z",
-  "last_updated": "2026-03-09T21:54:20.944082Z",
+  "last_updated": "2026-03-09T21:57:45.437813Z",
   "status": "active",
   "plates": {
     "26406": {
@@ -36824,7 +36824,7 @@
       "current_price": 48000,
       "bid_count": 72,
       "first_seen": "2026-03-09T18:26:38.330085Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -36970,9 +36970,9 @@
       "bid_count": 67,
       "first_seen": "2026-03-09T18:26:38.330085Z",
       "last_seen": "2026-03-09T21:54:20.943609Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 46500,
+      "completed_at": "2026-03-09T21:57:45.437344Z",
       "price_history": [
         {
           "price": 16500,
@@ -37344,7 +37344,7 @@
       "current_price": 47000,
       "bid_count": 78,
       "first_seen": "2026-03-09T19:18:35.790172Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -37550,7 +37550,7 @@
       "current_price": 20600,
       "bid_count": 81,
       "first_seen": "2026-03-09T19:29:27.615855Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -37683,7 +37683,7 @@
       "current_price": 35000,
       "bid_count": 55,
       "first_seen": "2026-03-09T19:32:15.016717Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -37813,10 +37813,10 @@
     "26578": {
       "plate_number": "43210",
       "plate_code": "20",
-      "current_price": 92000,
-      "bid_count": 86,
+      "current_price": 93000,
+      "bid_count": 88,
       "first_seen": "2026-03-09T19:32:15.016717Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -37924,6 +37924,10 @@
         {
           "price": 92000,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 93000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -38205,10 +38209,10 @@
     "26593": {
       "plate_number": "61661",
       "plate_code": "16",
-      "current_price": 80000,
-      "bid_count": 77,
+      "current_price": 80500,
+      "bid_count": 78,
       "first_seen": "2026-03-09T19:45:51.927852Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -38316,6 +38320,10 @@
         {
           "price": 80000,
           "timestamp": "2026-03-09T21:52:57.255774Z"
+        },
+        {
+          "price": 80500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -38589,10 +38597,10 @@
     "26664": {
       "plate_number": "91912",
       "plate_code": "1",
-      "current_price": 16400,
-      "bid_count": 69,
+      "current_price": 16600,
+      "bid_count": 70,
       "first_seen": "2026-03-09T19:54:24.671713Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -38696,16 +38704,20 @@
         {
           "price": 16400,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 16600,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26645": {
       "plate_number": "96900",
       "plate_code": "50",
-      "current_price": 44000,
-      "bid_count": 42,
+      "current_price": 44500,
+      "bid_count": 43,
       "first_seen": "2026-03-09T19:54:24.671713Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -38797,6 +38809,10 @@
         {
           "price": 44000,
           "timestamp": "2026-03-09T21:48:54.814780Z"
+        },
+        {
+          "price": 44500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -38888,10 +38904,10 @@
     "26581": {
       "plate_number": "44450",
       "plate_code": "50",
-      "current_price": 72500,
-      "bid_count": 84,
+      "current_price": 73500,
+      "bid_count": 86,
       "first_seen": "2026-03-09T19:57:52.946364Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -38975,6 +38991,10 @@
         {
           "price": 72500,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 73500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -39069,7 +39089,7 @@
       "current_price": 61000,
       "bid_count": 81,
       "first_seen": "2026-03-09T20:08:14.499849Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39324,7 +39344,7 @@
       "current_price": 11400,
       "bid_count": 52,
       "first_seen": "2026-03-09T20:20:01.742169Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39394,10 +39414,10 @@
     "26682": {
       "plate_number": "99111",
       "plate_code": "0",
-      "current_price": 63000,
-      "bid_count": 88,
+      "current_price": 65000,
+      "bid_count": 92,
       "first_seen": "2026-03-09T20:21:43.955065Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39501,16 +39521,20 @@
         {
           "price": 63000,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 65000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26639": {
       "plate_number": "90090",
       "plate_code": "21",
-      "current_price": 96000,
-      "bid_count": 152,
+      "current_price": 97000,
+      "bid_count": 154,
       "first_seen": "2026-03-09T20:21:43.955065Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39618,16 +39642,20 @@
         {
           "price": 96000,
           "timestamp": "2026-03-09T21:48:54.814780Z"
+        },
+        {
+          "price": 97000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26590": {
       "plate_number": "56006",
       "plate_code": "6",
-      "current_price": 36000,
-      "bid_count": 45,
+      "current_price": 37000,
+      "bid_count": 47,
       "first_seen": "2026-03-09T20:25:29.219396Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39683,16 +39711,20 @@
         {
           "price": 36000,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 37000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26628": {
       "plate_number": "81081",
       "plate_code": "18",
-      "current_price": 47500,
-      "bid_count": 58,
+      "current_price": 48500,
+      "bid_count": 60,
       "first_seen": "2026-03-09T20:27:12.673720Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39772,6 +39804,10 @@
         {
           "price": 47500,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 48500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -39781,7 +39817,7 @@
       "current_price": 28500,
       "bid_count": 33,
       "first_seen": "2026-03-09T20:30:05.238061Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39839,10 +39875,10 @@
     "26617": {
       "plate_number": "77050",
       "plate_code": "50",
-      "current_price": 31000,
-      "bid_count": 52,
+      "current_price": 31500,
+      "bid_count": 53,
       "first_seen": "2026-03-09T20:30:05.238061Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39914,16 +39950,20 @@
         {
           "price": 31000,
           "timestamp": "2026-03-09T21:52:57.255774Z"
+        },
+        {
+          "price": 31500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26576": {
       "plate_number": "41044",
       "plate_code": "14",
-      "current_price": 27000,
-      "bid_count": 49,
+      "current_price": 28500,
+      "bid_count": 51,
       "first_seen": "2026-03-09T20:30:05.238061Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40003,16 +40043,20 @@
         {
           "price": 27000,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 28500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26675": {
       "plate_number": "8001",
       "plate_code": "0",
-      "current_price": 37000,
-      "bid_count": 50,
+      "current_price": 38000,
+      "bid_count": 52,
       "first_seen": "2026-03-09T20:32:37.720862Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40064,16 +40108,20 @@
         {
           "price": 37000,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 38000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26665": {
       "plate_number": "98809",
       "plate_code": "1",
-      "current_price": 6400,
-      "bid_count": 21,
+      "current_price": 6600,
+      "bid_count": 22,
       "first_seen": "2026-03-09T20:32:37.720862Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40125,16 +40173,20 @@
         {
           "price": 6400,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 6600,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26559": {
       "plate_number": "25205",
       "plate_code": "50",
-      "current_price": 18000,
-      "bid_count": 33,
+      "current_price": 20000,
+      "bid_count": 36,
       "first_seen": "2026-03-09T20:35:35.432192Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40190,16 +40242,20 @@
         {
           "price": 18000,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 20000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26587": {
       "plate_number": "55105",
       "plate_code": "15",
-      "current_price": 22500,
-      "bid_count": 36,
+      "current_price": 24500,
+      "bid_count": 39,
       "first_seen": "2026-03-09T20:35:35.432192Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40255,6 +40311,10 @@
         {
           "price": 22500,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 24500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
@@ -40264,7 +40324,7 @@
       "current_price": 36000,
       "bid_count": 65,
       "first_seen": "2026-03-09T20:38:07.304332Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40354,10 +40414,10 @@
     "26601": {
       "plate_number": "67706",
       "plate_code": "22",
-      "current_price": 17500,
-      "bid_count": 29,
+      "current_price": 18500,
+      "bid_count": 31,
       "first_seen": "2026-03-09T20:41:01.851970Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40405,16 +40465,20 @@
         {
           "price": 17500,
           "timestamp": "2026-03-09T21:52:57.255774Z"
+        },
+        {
+          "price": 18500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26620": {
       "plate_number": "77167",
       "plate_code": "16",
-      "current_price": 16500,
-      "bid_count": 24,
+      "current_price": 20000,
+      "bid_count": 29,
       "first_seen": "2026-03-09T20:46:28.916486Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40458,16 +40522,20 @@
         {
           "price": 16500,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 20000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26595": {
       "plate_number": "65115",
       "plate_code": "15",
-      "current_price": 17500,
-      "bid_count": 33,
+      "current_price": 21500,
+      "bid_count": 39,
       "first_seen": "2026-03-09T20:46:28.916486Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40531,16 +40599,20 @@
         {
           "price": 17500,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 21500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26556": {
       "plate_number": "22344",
       "plate_code": "11",
-      "current_price": 71000,
-      "bid_count": 50,
+      "current_price": 71500,
+      "bid_count": 51,
       "first_seen": "2026-03-09T20:47:17.492101Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40580,16 +40652,20 @@
         {
           "price": 71000,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 71500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26625": {
       "plate_number": "80228",
       "plate_code": "22",
-      "current_price": 21500,
-      "bid_count": 36,
+      "current_price": 22500,
+      "bid_count": 38,
       "first_seen": "2026-03-09T20:47:17.492101Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40637,16 +40713,20 @@
         {
           "price": 21500,
           "timestamp": "2026-03-09T21:52:18.087221Z"
+        },
+        {
+          "price": 22500,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     },
     "26609": {
       "plate_number": "71127",
       "plate_code": "12",
-      "current_price": 15000,
-      "bid_count": 24,
+      "current_price": 16000,
+      "bid_count": 26,
       "first_seen": "2026-03-09T20:51:58.683127Z",
-      "last_seen": "2026-03-09T21:54:20.943609Z",
+      "last_seen": "2026-03-09T21:57:45.437344Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -40690,13 +40770,17 @@
         {
           "price": 15000,
           "timestamp": "2026-03-09T21:54:20.943609Z"
+        },
+        {
+          "price": 16000,
+          "timestamp": "2026-03-09T21:57:45.437344Z"
         }
       ]
     }
   },
   "stats": {
     "total_plates_seen": 555,
-    "completed_plates": 525,
-    "active_plates": 30
+    "completed_plates": 526,
+    "active_plates": 29
   }
 }
