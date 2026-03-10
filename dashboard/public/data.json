@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T07:42:38.570832Z",
+  "generated_at": "2026-03-10T08:49:48.587547Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -6078,9 +6078,17 @@
       "auction_id": "dubai_2026-02",
       "emirate": "Dubai",
       "start_date": "2026-02-22T19:04:41.716347Z",
-      "last_updated": "2026-03-10T07:42:36.406669Z",
+      "last_updated": "2026-03-10T08:49:45.324762Z",
       "status": "active",
       "plates": [
+        {
+          "id": "624123",
+          "plate_number": "2441",
+          "plate_code": "V",
+          "price": 48000,
+          "bid_count": 0,
+          "status": "active"
+        },
         {
           "id": "623826",
           "plate_number": "2421",
@@ -6122,6 +6130,14 @@
           "status": "active"
         },
         {
+          "id": "624124",
+          "plate_number": "33354",
+          "plate_code": "J",
+          "price": 28000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
           "id": "623831",
           "plate_number": "6940",
           "plate_code": "V",
@@ -6154,6 +6170,14 @@
           "status": "active"
         },
         {
+          "id": "624122",
+          "plate_number": "44648",
+          "plate_code": "A",
+          "price": 18000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
           "id": "623870",
           "plate_number": "48041",
           "plate_code": "A",
@@ -6166,6 +6190,30 @@
           "plate_number": "93439",
           "plate_code": "V",
           "price": 11100,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "624126",
+          "plate_number": "6381",
+          "plate_code": "C",
+          "price": 10100,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "624127",
+          "plate_number": "3742",
+          "plate_code": "C",
+          "price": 10100,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "624130",
+          "plate_number": "2006",
+          "plate_code": "0",
+          "price": 10100,
           "bid_count": 1,
           "status": "active"
         },
@@ -6226,7 +6274,7 @@
           "status": "active"
         }
       ],
-      "count": 18
+      "count": 24
     },
     "fujairah": {
       "auction_id": "fujairah_2026-02",
@@ -175872,7 +175920,7 @@
     "buynow_available": 215,
     "buynow_sold": 454,
     "buynow_total": 669,
-    "auctions_total": 18,
+    "auctions_total": 24,
     "archives_count": 14,
     "archived_buynow_count": 11,
     "archived_tracking_count": 20,
