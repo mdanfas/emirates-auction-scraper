@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-10T09:49:44.747900Z",
+  "generated_at": "2026-03-10T10:42:33.365951Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -6078,15 +6078,15 @@
       "auction_id": "dubai_2026-02",
       "emirate": "Dubai",
       "start_date": "2026-02-22T19:04:41.716347Z",
-      "last_updated": "2026-03-10T09:49:41.832885Z",
+      "last_updated": "2026-03-10T10:42:30.945522Z",
       "status": "active",
       "plates": [
         {
           "id": "624123",
           "plate_number": "2441",
           "plate_code": "V",
-          "price": 48000,
-          "bid_count": 0,
+          "price": 49000,
+          "bid_count": 1,
           "status": "active"
         },
         {
@@ -6157,8 +6157,8 @@
           "id": "623829",
           "plate_number": "9082",
           "plate_code": "B",
-          "price": 22900,
-          "bid_count": 80,
+          "price": 23000,
+          "bid_count": 81,
           "status": "active"
         },
         {
@@ -6272,9 +6272,33 @@
           "price": 6100,
           "bid_count": 1,
           "status": "active"
+        },
+        {
+          "id": "624129",
+          "plate_number": "43441",
+          "plate_code": "E",
+          "price": 6000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
+          "id": "624128",
+          "plate_number": "42232",
+          "plate_code": "D",
+          "price": 3500,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
+          "id": "624132",
+          "plate_number": "8815",
+          "plate_code": "U",
+          "price": 400,
+          "bid_count": 3,
+          "status": "active"
         }
       ],
-      "count": 24
+      "count": 27
     },
     "fujairah": {
       "auction_id": "fujairah_2026-02",
@@ -175920,7 +175944,7 @@
     "buynow_available": 215,
     "buynow_sold": 454,
     "buynow_total": 669,
-    "auctions_total": 24,
+    "auctions_total": 27,
     "archives_count": 14,
     "archived_buynow_count": 11,
     "archived_tracking_count": 20,
