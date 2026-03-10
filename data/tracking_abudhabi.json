@@ -3,12 +3,81 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-03-10T00:15:10.966872Z",
-  "last_updated": "2026-03-10T00:15:10.967735Z",
+  "last_updated": "2026-03-10T00:18:53.099630Z",
   "status": "active",
-  "plates": {},
+  "plates": {
+    "26456": {
+      "plate_number": "2132",
+      "plate_code": "13",
+      "current_price": 107500,
+      "bid_count": 76,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:18:53.099536Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 107500,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        }
+      ]
+    },
+    "26458": {
+      "plate_number": "2214",
+      "plate_code": "14",
+      "current_price": 121000,
+      "bid_count": 96,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:18:53.099536Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 121000,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        }
+      ]
+    },
+    "26460": {
+      "plate_number": "2233",
+      "plate_code": "22",
+      "current_price": 306000,
+      "bid_count": 244,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:18:53.099536Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 306000,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        }
+      ]
+    },
+    "26577": {
+      "plate_number": "42424",
+      "plate_code": "22",
+      "current_price": 143500,
+      "bid_count": 137,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:18:53.099536Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 143500,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        }
+      ]
+    }
+  },
   "stats": {
-    "total_plates_seen": 0,
+    "total_plates_seen": 4,
     "completed_plates": 0,
-    "active_plates": 0
+    "active_plates": 4
   }
 }
