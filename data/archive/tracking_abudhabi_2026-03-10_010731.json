@@ -1,0 +1,165 @@
+{
+  "auction_id": "abudhabi_2026-03",
+  "emirate": "abudhabi",
+  "display_name": "Abu Dhabi",
+  "start_date": "2026-03-10T00:15:10.966872Z",
+  "last_updated": "2026-03-10T01:07:31.276798Z",
+  "status": "archived",
+  "plates": {
+    "26456": {
+      "plate_number": "2132",
+      "plate_code": "13",
+      "current_price": 110000,
+      "bid_count": 81,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:41:21.478575Z",
+      "status": "completed",
+      "final_price": 110000,
+      "completed_at": "2026-03-10T00:45:53.179138Z",
+      "price_history": [
+        {
+          "price": 107500,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        },
+        {
+          "price": 108000,
+          "timestamp": "2026-03-10T00:24:15.765001Z"
+        },
+        {
+          "price": 109500,
+          "timestamp": "2026-03-10T00:29:42.787151Z"
+        },
+        {
+          "price": 110000,
+          "timestamp": "2026-03-10T00:40:31.555355Z"
+        }
+      ]
+    },
+    "26458": {
+      "plate_number": "2214",
+      "plate_code": "14",
+      "current_price": 123000,
+      "bid_count": 100,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:30:27.330840Z",
+      "status": "completed",
+      "final_price": 123000,
+      "completed_at": "2026-03-10T00:35:06.873405Z",
+      "price_history": [
+        {
+          "price": 121000,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        },
+        {
+          "price": 121500,
+          "timestamp": "2026-03-10T00:24:15.765001Z"
+        },
+        {
+          "price": 123000,
+          "timestamp": "2026-03-10T00:29:42.787151Z"
+        }
+      ]
+    },
+    "26460": {
+      "plate_number": "2233",
+      "plate_code": "22",
+      "current_price": 310500,
+      "bid_count": 251,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T00:41:21.478575Z",
+      "status": "completed",
+      "final_price": 310500,
+      "completed_at": "2026-03-10T00:45:53.179138Z",
+      "price_history": [
+        {
+          "price": 306000,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        },
+        {
+          "price": 307500,
+          "timestamp": "2026-03-10T00:24:15.765001Z"
+        },
+        {
+          "price": 308000,
+          "timestamp": "2026-03-10T00:29:42.787151Z"
+        },
+        {
+          "price": 310000,
+          "timestamp": "2026-03-10T00:30:27.330840Z"
+        },
+        {
+          "price": 310500,
+          "timestamp": "2026-03-10T00:35:53.812072Z"
+        }
+      ]
+    },
+    "26577": {
+      "plate_number": "42424",
+      "plate_code": "22",
+      "current_price": 171000,
+      "bid_count": 163,
+      "first_seen": "2026-03-10T00:18:53.099536Z",
+      "last_seen": "2026-03-10T01:03:05.745805Z",
+      "status": "completed",
+      "final_price": 171000,
+      "completed_at": "2026-03-10T01:07:31.275959Z",
+      "price_history": [
+        {
+          "price": 143500,
+          "timestamp": "2026-03-10T00:18:53.099536Z"
+        },
+        {
+          "price": 144500,
+          "timestamp": "2026-03-10T00:19:34.625799Z"
+        },
+        {
+          "price": 149000,
+          "timestamp": "2026-03-10T00:24:15.765001Z"
+        },
+        {
+          "price": 152000,
+          "timestamp": "2026-03-10T00:29:42.787151Z"
+        },
+        {
+          "price": 152500,
+          "timestamp": "2026-03-10T00:30:27.330840Z"
+        },
+        {
+          "price": 153500,
+          "timestamp": "2026-03-10T00:35:06.873405Z"
+        },
+        {
+          "price": 154500,
+          "timestamp": "2026-03-10T00:35:53.812072Z"
+        },
+        {
+          "price": 160500,
+          "timestamp": "2026-03-10T00:40:31.555355Z"
+        },
+        {
+          "price": 165000,
+          "timestamp": "2026-03-10T00:41:21.478575Z"
+        },
+        {
+          "price": 170000,
+          "timestamp": "2026-03-10T00:51:15.200889Z"
+        },
+        {
+          "price": 170500,
+          "timestamp": "2026-03-10T00:56:41.895688Z"
+        },
+        {
+          "price": 171000,
+          "timestamp": "2026-03-10T01:02:06.569155Z"
+        }
+      ]
+    }
+  },
+  "stats": {
+    "total_plates_seen": 4,
+    "completed_plates": 4,
+    "active_plates": 0
+  },
+  "csv_generated": "data/archive/abudhabi_2026-03-10.csv",
+  "archived_at": "2026-03-10T01:07:31.276780Z"
+}
