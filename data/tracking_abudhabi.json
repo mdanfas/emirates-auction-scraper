@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-03-10T00:15:10.966872Z",
-  "last_updated": "2026-03-10T00:29:42.787218Z",
+  "last_updated": "2026-03-10T00:30:27.330919Z",
   "status": "active",
   "plates": {
     "26456": {
@@ -12,7 +12,7 @@
       "current_price": 109500,
       "bid_count": 80,
       "first_seen": "2026-03-10T00:18:53.099536Z",
-      "last_seen": "2026-03-10T00:29:42.787151Z",
+      "last_seen": "2026-03-10T00:30:27.330840Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -37,7 +37,7 @@
       "current_price": 123000,
       "bid_count": 100,
       "first_seen": "2026-03-10T00:18:53.099536Z",
-      "last_seen": "2026-03-10T00:29:42.787151Z",
+      "last_seen": "2026-03-10T00:30:27.330840Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -59,10 +59,10 @@
     "26460": {
       "plate_number": "2233",
       "plate_code": "22",
-      "current_price": 308000,
-      "bid_count": 248,
+      "current_price": 310000,
+      "bid_count": 250,
       "first_seen": "2026-03-10T00:18:53.099536Z",
-      "last_seen": "2026-03-10T00:29:42.787151Z",
+      "last_seen": "2026-03-10T00:30:27.330840Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -78,16 +78,20 @@
         {
           "price": 308000,
           "timestamp": "2026-03-10T00:29:42.787151Z"
+        },
+        {
+          "price": 310000,
+          "timestamp": "2026-03-10T00:30:27.330840Z"
         }
       ]
     },
     "26577": {
       "plate_number": "42424",
       "plate_code": "22",
-      "current_price": 152000,
-      "bid_count": 151,
+      "current_price": 152500,
+      "bid_count": 152,
       "first_seen": "2026-03-10T00:18:53.099536Z",
-      "last_seen": "2026-03-10T00:29:42.787151Z",
+      "last_seen": "2026-03-10T00:30:27.330840Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -107,6 +111,10 @@
         {
           "price": 152000,
           "timestamp": "2026-03-10T00:29:42.787151Z"
+        },
+        {
+          "price": 152500,
+          "timestamp": "2026-03-10T00:30:27.330840Z"
         }
       ]
     }
