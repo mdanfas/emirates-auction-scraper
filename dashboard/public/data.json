@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-11T10:42:47.269853Z",
+  "generated_at": "2026-03-11T11:35:20.125150Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -6078,7 +6078,7 @@
       "auction_id": "dubai_2026-02",
       "emirate": "Dubai",
       "start_date": "2026-02-22T19:04:41.716347Z",
-      "last_updated": "2026-03-11T10:42:44.889061Z",
+      "last_updated": "2026-03-11T11:35:16.930456Z",
       "status": "active",
       "plates": [
         {
@@ -6125,8 +6125,16 @@
           "id": "624132",
           "plate_number": "8815",
           "plate_code": "U",
+          "price": 33100,
+          "bid_count": 7,
+          "status": "active"
+        },
+        {
+          "id": "623829",
+          "plate_number": "9082",
+          "plate_code": "B",
           "price": 30100,
-          "bid_count": 5,
+          "bid_count": 89,
           "status": "active"
         },
         {
@@ -6146,35 +6154,27 @@
           "status": "active"
         },
         {
-          "id": "623829",
-          "plate_number": "9082",
-          "plate_code": "B",
-          "price": 25300,
-          "bid_count": 88,
-          "status": "active"
-        },
-        {
-          "id": "623831",
-          "plate_number": "6940",
-          "plate_code": "V",
-          "price": 23500,
-          "bid_count": 34,
-          "status": "active"
-        },
-        {
           "id": "623830",
           "plate_number": "6903",
           "plate_code": "V",
-          "price": 23500,
-          "bid_count": 34,
+          "price": 25900,
+          "bid_count": 35,
           "status": "active"
         },
         {
           "id": "623832",
           "plate_number": "0",
           "plate_code": "",
-          "price": 21400,
-          "bid_count": 16,
+          "price": 25800,
+          "bid_count": 17,
+          "status": "active"
+        },
+        {
+          "id": "623831",
+          "plate_number": "6940",
+          "plate_code": "V",
+          "price": 25600,
+          "bid_count": 35,
           "status": "active"
         },
         {
