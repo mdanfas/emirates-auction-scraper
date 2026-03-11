@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-03-11T13:08:06.475692Z",
-  "last_updated": "2026-03-11T19:12:29.018293Z",
+  "last_updated": "2026-03-11T19:13:13.812334Z",
   "status": "active",
   "plates": {
     "623829": {
@@ -122,10 +122,10 @@
     "623828": {
       "plate_number": "7817",
       "plate_code": "N",
-      "current_price": 40700,
-      "bid_count": 106,
+      "current_price": 40800,
+      "bid_count": 107,
       "first_seen": "2026-03-11T14:50:03.353702Z",
-      "last_seen": "2026-03-11T19:12:29.018199Z",
+      "last_seen": "2026-03-11T19:13:13.812254Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -177,6 +177,10 @@
         {
           "price": 40700,
           "timestamp": "2026-03-11T19:08:43.625267Z"
+        },
+        {
+          "price": 40800,
+          "timestamp": "2026-03-11T19:13:13.812254Z"
         }
       ]
     },
@@ -333,7 +337,7 @@
       "current_price": 31100,
       "bid_count": 64,
       "first_seen": "2026-03-11T14:50:03.353702Z",
-      "last_seen": "2026-03-11T19:12:29.018199Z",
+      "last_seen": "2026-03-11T19:13:13.812254Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -581,7 +585,7 @@
       "current_price": 38000,
       "bid_count": 37,
       "first_seen": "2026-03-11T14:50:03.353702Z",
-      "last_seen": "2026-03-11T19:12:29.018199Z",
+      "last_seen": "2026-03-11T19:13:13.812254Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -930,9 +934,9 @@
       "bid_count": 6,
       "first_seen": "2026-03-11T14:50:03.353702Z",
       "last_seen": "2026-03-11T19:12:29.018199Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 8600,
+      "completed_at": "2026-03-11T19:13:13.812254Z",
       "price_history": [
         {
           "price": 8100,
@@ -1188,7 +1192,7 @@
   },
   "stats": {
     "total_plates_seen": 27,
-    "completed_plates": 23,
-    "active_plates": 4
+    "completed_plates": 24,
+    "active_plates": 3
   }
 }
