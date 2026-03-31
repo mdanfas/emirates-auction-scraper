@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-31T11:53:30.672801Z",
+  "generated_at": "2026-03-31T13:26:11.868062Z",
   "buynow": {
     "sharjah": {
       "emirate": "Sharjah",
@@ -6627,7 +6627,7 @@
       "auction_id": "dubai_2026-03",
       "emirate": "Dubai",
       "start_date": "2026-03-11T19:30:27.310177Z",
-      "last_updated": "2026-03-31T11:53:27.722287Z",
+      "last_updated": "2026-03-31T13:26:08.651201Z",
       "status": "active",
       "plates": [
         {
@@ -6668,6 +6668,14 @@
           "plate_code": "G",
           "price": 42100,
           "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "626696",
+          "plate_number": "4665",
+          "plate_code": "V",
+          "price": 42000,
+          "bid_count": 0,
           "status": "active"
         },
         {
@@ -6818,7 +6826,15 @@
           "id": "626384",
           "plate_number": "99577",
           "plate_code": "Q",
-          "price": 400,
+          "price": 1100,
+          "bid_count": 5,
+          "status": "active"
+        },
+        {
+          "id": "626387",
+          "plate_number": "68811",
+          "plate_code": "K",
+          "price": 600,
           "bid_count": 3,
           "status": "active"
         },
@@ -6826,20 +6842,12 @@
           "id": "626386",
           "plate_number": "76276",
           "plate_code": "J",
-          "price": 200,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "626387",
-          "plate_number": "68811",
-          "plate_code": "K",
-          "price": 200,
-          "bid_count": 1,
+          "price": 500,
+          "bid_count": 2,
           "status": "active"
         }
       ],
-      "count": 26
+      "count": 27
     }
   },
   "archives": [
@@ -179087,7 +179095,7 @@
     "buynow_available": 194,
     "buynow_sold": 530,
     "buynow_total": 724,
-    "auctions_total": 26,
+    "auctions_total": 27,
     "archives_count": 15,
     "archived_buynow_count": 11,
     "archived_tracking_count": 22,
