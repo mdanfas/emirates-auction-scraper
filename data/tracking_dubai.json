@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-04-03T19:00:27.623747Z",
-  "last_updated": "2026-04-10T05:27:25.217153Z",
+  "last_updated": "2026-04-10T07:46:24.603550Z",
   "status": "active",
   "plates": {
     "628159": {
@@ -12,7 +12,7 @@
       "current_price": 171000,
       "bid_count": 0,
       "first_seen": "2026-04-08T07:25:13.644085Z",
-      "last_seen": "2026-04-10T05:27:25.217089Z",
+      "last_seen": "2026-04-10T07:46:24.603475Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -29,7 +29,7 @@
       "current_price": 18000,
       "bid_count": 0,
       "first_seen": "2026-04-10T05:27:25.217089Z",
-      "last_seen": "2026-04-10T05:27:25.217089Z",
+      "last_seen": "2026-04-10T07:46:24.603475Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -39,11 +39,45 @@
           "timestamp": "2026-04-10T05:27:25.217089Z"
         }
       ]
+    },
+    "628455": {
+      "plate_number": "5798",
+      "plate_code": "G",
+      "current_price": 23000,
+      "bid_count": 0,
+      "first_seen": "2026-04-10T07:46:24.603475Z",
+      "last_seen": "2026-04-10T07:46:24.603475Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 23000,
+          "timestamp": "2026-04-10T07:46:24.603475Z"
+        }
+      ]
+    },
+    "628457": {
+      "plate_number": "5798",
+      "plate_code": "A",
+      "current_price": 50000,
+      "bid_count": 0,
+      "first_seen": "2026-04-10T07:46:24.603475Z",
+      "last_seen": "2026-04-10T07:46:24.603475Z",
+      "status": "active",
+      "final_price": null,
+      "completed_at": null,
+      "price_history": [
+        {
+          "price": 50000,
+          "timestamp": "2026-04-10T07:46:24.603475Z"
+        }
+      ]
     }
   },
   "stats": {
-    "total_plates_seen": 2,
+    "total_plates_seen": 4,
     "completed_plates": 0,
-    "active_plates": 2
+    "active_plates": 4
   }
 }

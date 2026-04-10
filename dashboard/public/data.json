@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-10T05:27:28.246310Z",
+  "generated_at": "2026-04-10T07:46:27.022043Z",
   "buynow": {
     "uaq": {
       "emirate": "Umm Al Quwain",
@@ -8192,7 +8192,7 @@
       "auction_id": "dubai_2026-04",
       "emirate": "Dubai",
       "start_date": "2026-04-03T19:00:27.623747Z",
-      "last_updated": "2026-04-10T05:27:25.217153Z",
+      "last_updated": "2026-04-10T07:46:24.603550Z",
       "status": "active",
       "plates": [
         {
@@ -8200,6 +8200,22 @@
           "plate_number": "1551",
           "plate_code": "U",
           "price": 171000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
+          "id": "628457",
+          "plate_number": "5798",
+          "plate_code": "A",
+          "price": 50000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
+          "id": "628455",
+          "plate_number": "5798",
+          "plate_code": "G",
+          "price": 23000,
           "bid_count": 0,
           "status": "active"
         },
@@ -8212,13 +8228,13 @@
           "status": "active"
         }
       ],
-      "count": 2
+      "count": 4
     },
     "uaq": {
       "auction_id": "uaq_2026-02",
       "emirate": "Umm Al Quwain",
       "start_date": "2026-02-28T00:57:07.851829Z",
-      "last_updated": "2026-04-10T05:27:27.603224Z",
+      "last_updated": "2026-04-10T07:46:26.462732Z",
       "status": "active",
       "plates": [
         {
@@ -8265,16 +8281,16 @@
           "id": "7771",
           "plate_number": "7777",
           "plate_code": "G",
-          "price": 225500,
-          "bid_count": 56,
+          "price": 230000,
+          "bid_count": 57,
           "status": "active"
         },
         {
           "id": "7779",
           "plate_number": "55555",
           "plate_code": "G",
-          "price": 220500,
-          "bid_count": 42,
+          "price": 221000,
+          "bid_count": 43,
           "status": "active"
         },
         {
@@ -8513,8 +8529,8 @@
           "id": "7764",
           "plate_number": "1997",
           "plate_code": "M",
-          "price": 18000,
-          "bid_count": 13,
+          "price": 18200,
+          "bid_count": 14,
           "status": "active"
         },
         {
@@ -187109,7 +187125,7 @@
     "buynow_available": 206,
     "buynow_sold": 698,
     "buynow_total": 904,
-    "auctions_total": 42,
+    "auctions_total": 44,
     "archives_count": 16,
     "archived_buynow_count": 13,
     "archived_tracking_count": 24,
