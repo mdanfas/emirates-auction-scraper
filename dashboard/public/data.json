@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-13T10:49:11.191961Z",
+  "generated_at": "2026-04-13T12:05:06.096567Z",
   "buynow": {
     "uaq": {
       "emirate": "Umm Al Quwain",
@@ -8192,7 +8192,7 @@
       "auction_id": "dubai_2026-04",
       "emirate": "Dubai",
       "start_date": "2026-04-03T19:00:27.623747Z",
-      "last_updated": "2026-04-13T10:49:09.224274Z",
+      "last_updated": "2026-04-13T12:05:01.926336Z",
       "status": "active",
       "plates": [
         {
@@ -8220,6 +8220,14 @@
           "status": "active"
         },
         {
+          "id": "629003",
+          "plate_number": "7679",
+          "plate_code": "G",
+          "price": 47000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
           "id": "628455",
           "plate_number": "5798",
           "plate_code": "G",
@@ -8234,9 +8242,25 @@
           "price": 18000,
           "bid_count": 0,
           "status": "active"
+        },
+        {
+          "id": "629004",
+          "plate_number": "44267",
+          "plate_code": "A",
+          "price": 5000,
+          "bid_count": 0,
+          "status": "active"
+        },
+        {
+          "id": "629006",
+          "plate_number": "70477",
+          "plate_code": "B",
+          "price": 4500,
+          "bid_count": 0,
+          "status": "active"
         }
       ],
-      "count": 5
+      "count": 8
     },
     "uaq": {
       "auction_id": "uaq_2026-04",
@@ -8251,7 +8275,7 @@
       "auction_id": "rak_2026-01",
       "emirate": "Ras Al Khaimah",
       "start_date": "2026-01-30T20:23:21.113812Z",
-      "last_updated": "2026-04-13T10:49:10.589770Z",
+      "last_updated": "2026-04-13T12:05:05.022594Z",
       "status": "active",
       "plates": [
         {
@@ -8402,8 +8426,8 @@
           "id": "2016",
           "plate_number": "7007",
           "plate_code": "D",
-          "price": 50000,
-          "bid_count": 0,
+          "price": 50200,
+          "bid_count": 1,
           "status": "active"
         },
         {
@@ -196584,7 +196608,7 @@
     "buynow_available": 190,
     "buynow_sold": 714,
     "buynow_total": 904,
-    "auctions_total": 38,
+    "auctions_total": 41,
     "archives_count": 17,
     "archived_buynow_count": 14,
     "archived_tracking_count": 25,
