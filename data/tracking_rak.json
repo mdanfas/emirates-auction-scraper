@@ -3,7 +3,7 @@
   "emirate": "rak",
   "display_name": "Ras Al Khaimah",
   "start_date": "2026-01-30T20:23:21.113812Z",
-  "last_updated": "2026-04-17T18:41:31.391625Z",
+  "last_updated": "2026-04-17T18:45:39.358729Z",
   "status": "active",
   "plates": {
     "1999": {
@@ -212,10 +212,10 @@
     "2005": {
       "plate_number": "456",
       "plate_code": "I",
-      "current_price": 138500,
-      "bid_count": 54,
+      "current_price": 139500,
+      "bid_count": 56,
       "first_seen": "2026-04-10T22:40:39.877165Z",
-      "last_seen": "2026-04-17T18:41:31.391531Z",
+      "last_seen": "2026-04-17T18:45:39.358628Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -299,6 +299,10 @@
         {
           "price": 138500,
           "timestamp": "2026-04-17T18:40:10.268232Z"
+        },
+        {
+          "price": 139500,
+          "timestamp": "2026-04-17T18:45:39.358628Z"
         }
       ]
     },
@@ -346,7 +350,7 @@
       "current_price": 142000,
       "bid_count": 23,
       "first_seen": "2026-04-10T22:40:39.877165Z",
-      "last_seen": "2026-04-17T18:41:31.391531Z",
+      "last_seen": "2026-04-17T18:45:39.358628Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1410,10 +1414,10 @@
     "2024": {
       "plate_number": "66666",
       "plate_code": "D",
-      "current_price": 377600,
-      "bid_count": 108,
+      "current_price": 380600,
+      "bid_count": 114,
       "first_seen": "2026-04-10T22:40:39.877165Z",
-      "last_seen": "2026-04-17T18:41:31.391531Z",
+      "last_seen": "2026-04-17T18:45:39.358628Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1529,6 +1533,10 @@
         {
           "price": 377600,
           "timestamp": "2026-04-17T18:41:31.391531Z"
+        },
+        {
+          "price": 380600,
+          "timestamp": "2026-04-17T18:45:39.358628Z"
         }
       ]
     },
