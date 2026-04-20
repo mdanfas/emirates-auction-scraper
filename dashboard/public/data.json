@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T10:51:20.247418Z",
+  "generated_at": "2026-04-20T12:06:24.496563Z",
   "buynow": {
     "uaq": {
       "emirate": "Umm Al Quwain",
@@ -8714,10 +8714,19 @@
       "auction_id": "dubai_2026-04",
       "emirate": "Dubai",
       "start_date": "2026-04-14T18:46:12.264875Z",
-      "last_updated": "2026-04-14T18:46:12.264916Z",
+      "last_updated": "2026-04-20T12:06:22.488821Z",
       "status": "active",
-      "plates": [],
-      "count": 0
+      "plates": [
+        {
+          "id": "630805",
+          "plate_number": "94",
+          "plate_code": "L",
+          "price": 4050000,
+          "bid_count": 0,
+          "status": "active"
+        }
+      ],
+      "count": 1
     },
     "uaq": {
       "auction_id": "uaq_2026-04",
@@ -200597,7 +200606,7 @@
     "buynow_available": 192,
     "buynow_sold": 770,
     "buynow_total": 962,
-    "auctions_total": 0,
+    "auctions_total": 1,
     "archives_count": 19,
     "archived_buynow_count": 15,
     "archived_tracking_count": 27,
