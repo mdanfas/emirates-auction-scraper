@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-04-14T18:46:12.264875Z",
-  "last_updated": "2026-04-24T19:23:41.830355Z",
+  "last_updated": "2026-04-24T19:27:22.989712Z",
   "status": "active",
   "plates": {
     "630805": {
@@ -822,7 +822,7 @@
       "current_price": 39800,
       "bid_count": 24,
       "first_seen": "2026-04-21T13:48:20.982499Z",
-      "last_seen": "2026-04-24T19:23:41.830269Z",
+      "last_seen": "2026-04-24T19:27:22.989637Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -2804,10 +2804,10 @@
     "631568": {
       "plate_number": "50055",
       "plate_code": "T",
-      "current_price": 66000,
-      "bid_count": 108,
+      "current_price": 66100,
+      "bid_count": 109,
       "first_seen": "2026-04-22T17:05:12.199103Z",
-      "last_seen": "2026-04-24T19:23:41.830269Z",
+      "last_seen": "2026-04-24T19:27:22.989637Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -2975,6 +2975,10 @@
         {
           "price": 66000,
           "timestamp": "2026-04-24T19:23:41.830269Z"
+        },
+        {
+          "price": 66100,
+          "timestamp": "2026-04-24T19:27:22.989637Z"
         }
       ]
     },
