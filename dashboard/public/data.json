@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-01T22:02:36.040891Z",
+  "generated_at": "2026-05-01T22:04:03.079354Z",
   "buynow": {
     "uaq": {
       "emirate": "Umm Al Quwain",
@@ -8715,7 +8715,7 @@
       "auction_id": "dubai_2026-04",
       "emirate": "Dubai",
       "start_date": "2026-04-24T20:56:28.250599Z",
-      "last_updated": "2026-05-01T22:02:32.153395Z",
+      "last_updated": "2026-05-01T22:04:00.118307Z",
       "status": "active",
       "plates": [
         {
@@ -8831,7 +8831,7 @@
       "auction_id": "abudhabi_2026-03",
       "emirate": "Abu Dhabi",
       "start_date": "2026-03-10T01:07:31.277113Z",
-      "last_updated": "2026-05-01T22:02:33.942953Z",
+      "last_updated": "2026-05-01T22:04:01.595306Z",
       "status": "active",
       "plates": [
         {
@@ -8840,7 +8840,7 @@
           "plate_code": "",
           "price": 6001000,
           "bid_count": 266,
-          "status": "active"
+          "status": "completed"
         },
         {
           "id": "26849",
@@ -9923,6 +9923,14 @@
           "status": "completed"
         },
         {
+          "id": "26924",
+          "plate_number": "9902",
+          "plate_code": "1",
+          "price": 70000,
+          "bid_count": 35,
+          "status": "active"
+        },
+        {
           "id": "26908",
           "plate_number": "7697",
           "plate_code": "1",
@@ -9953,14 +9961,6 @@
           "price": 67000,
           "bid_count": 58,
           "status": "completed"
-        },
-        {
-          "id": "26924",
-          "plate_number": "9902",
-          "plate_code": "1",
-          "price": 67000,
-          "bid_count": 33,
-          "status": "active"
         },
         {
           "id": "26983",
@@ -10497,6 +10497,14 @@
           "price": 35000,
           "bid_count": 6,
           "status": "completed"
+        },
+        {
+          "id": "26998",
+          "plate_number": "90999",
+          "plate_code": "22",
+          "price": 34000,
+          "bid_count": 16,
+          "status": "active"
         },
         {
           "id": "26880",
@@ -11435,7 +11443,7 @@
           "status": "completed"
         }
       ],
-      "count": 325
+      "count": 326
     },
     "ajman": {
       "auction_id": "ajman_2026-01",
@@ -206582,7 +206590,7 @@
     "buynow_available": 196,
     "buynow_sold": 766,
     "buynow_total": 962,
-    "auctions_total": 336,
+    "auctions_total": 337,
     "archives_count": 20,
     "archived_buynow_count": 15,
     "archived_tracking_count": 28,
