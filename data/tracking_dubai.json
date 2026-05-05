@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-04-24T20:56:28.250599Z",
-  "last_updated": "2026-05-05T18:51:12.297913Z",
+  "last_updated": "2026-05-05T18:54:11.025022Z",
   "status": "active",
   "plates": {
     "632684": {
@@ -90,7 +90,7 @@
       "current_price": 29500,
       "bid_count": 56,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:51:12.297839Z",
+      "last_seen": "2026-05-05T18:54:11.024947Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -223,7 +223,7 @@
       "current_price": 27000,
       "bid_count": 40,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:51:12.297839Z",
+      "last_seen": "2026-05-05T18:54:11.024947Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -329,10 +329,10 @@
     "632949": {
       "plate_number": "3826",
       "plate_code": "N",
-      "current_price": 25200,
-      "bid_count": 51,
+      "current_price": 25300,
+      "bid_count": 52,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:51:12.297839Z",
+      "last_seen": "2026-05-05T18:54:11.024947Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -452,16 +452,20 @@
         {
           "price": 25200,
           "timestamp": "2026-05-05T18:45:46.036839Z"
+        },
+        {
+          "price": 25300,
+          "timestamp": "2026-05-05T18:54:11.024947Z"
         }
       ]
     },
     "632950": {
       "plate_number": "4561",
       "plate_code": "N",
-      "current_price": 32100,
-      "bid_count": 78,
+      "current_price": 32300,
+      "bid_count": 80,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:51:12.297839Z",
+      "last_seen": "2026-05-05T18:54:11.024947Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -613,6 +617,10 @@
         {
           "price": 32100,
           "timestamp": "2026-05-05T18:45:46.036839Z"
+        },
+        {
+          "price": 32300,
+          "timestamp": "2026-05-05T18:54:11.024947Z"
         }
       ]
     },
