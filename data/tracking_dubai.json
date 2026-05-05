@@ -3,7 +3,7 @@
   "emirate": "dubai",
   "display_name": "Dubai",
   "start_date": "2026-04-24T20:56:28.250599Z",
-  "last_updated": "2026-05-05T18:54:11.025022Z",
+  "last_updated": "2026-05-05T18:56:41.900274Z",
   "status": "active",
   "plates": {
     "632684": {
@@ -90,7 +90,7 @@
       "current_price": 29500,
       "bid_count": 56,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:54:11.024947Z",
+      "last_seen": "2026-05-05T18:56:41.900162Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -220,10 +220,10 @@
     "632753": {
       "plate_number": "1753",
       "plate_code": "L",
-      "current_price": 27000,
-      "bid_count": 40,
+      "current_price": 27200,
+      "bid_count": 42,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:54:11.024947Z",
+      "last_seen": "2026-05-05T18:56:41.900162Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -323,16 +323,20 @@
         {
           "price": 27000,
           "timestamp": "2026-05-05T18:48:31.565523Z"
+        },
+        {
+          "price": 27200,
+          "timestamp": "2026-05-05T18:56:41.900162Z"
         }
       ]
     },
     "632949": {
       "plate_number": "3826",
       "plate_code": "N",
-      "current_price": 25300,
-      "bid_count": 52,
+      "current_price": 25400,
+      "bid_count": 53,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:54:11.024947Z",
+      "last_seen": "2026-05-05T18:56:41.900162Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -456,6 +460,10 @@
         {
           "price": 25300,
           "timestamp": "2026-05-05T18:54:11.024947Z"
+        },
+        {
+          "price": 25400,
+          "timestamp": "2026-05-05T18:56:41.900162Z"
         }
       ]
     },
@@ -465,7 +473,7 @@
       "current_price": 32300,
       "bid_count": 80,
       "first_seen": "2026-05-01T09:02:27.817515Z",
-      "last_seen": "2026-05-05T18:54:11.024947Z",
+      "last_seen": "2026-05-05T18:56:41.900162Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
