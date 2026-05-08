@@ -3,7 +3,7 @@
   "emirate": "sharjah",
   "display_name": "Sharjah",
   "start_date": "2026-05-06T11:49:59.387979Z",
-  "last_updated": "2026-05-08T21:20:50.653179Z",
+  "last_updated": "2026-05-08T21:23:53.169837Z",
   "status": "active",
   "plates": {
     "2054": {
@@ -3171,10 +3171,10 @@
     "2088": {
       "plate_number": "6161",
       "plate_code": "4",
-      "current_price": 128500,
-      "bid_count": 103,
+      "current_price": 130000,
+      "bid_count": 104,
       "first_seen": "2026-05-06T14:21:00.733036Z",
-      "last_seen": "2026-05-08T21:20:50.653086Z",
+      "last_seen": "2026-05-08T21:23:53.169713Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -3386,6 +3386,10 @@
         {
           "price": 128500,
           "timestamp": "2026-05-08T21:20:50.653086Z"
+        },
+        {
+          "price": 130000,
+          "timestamp": "2026-05-08T21:23:53.169713Z"
         }
       ]
     },
