@@ -93,7 +93,7 @@ def main():
     
     # Buy Now mode - scrape Buy Now sections
     if "--buynow" in sys.argv:
-        print("\n🛒 BUY NOW MODE")
+        print("\nBUY NOW MODE")
         
         if "--emirate" in sys.argv:
             idx = sys.argv.index("--emirate")
@@ -111,7 +111,7 @@ def main():
     
     # Discovery mode
     if "--discover" in sys.argv:
-        print("\n🔍 DISCOVERY MODE: Checking all emirates...")
+        print("\nDISCOVERY MODE: Checking all emirates...")
         active_auctions = check_active_auctions()
         
         for emirate, info in active_auctions.items():

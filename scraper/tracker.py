@@ -89,6 +89,12 @@ class AuctionTracker:
                 if existing["status"] == "completed":
                     continue
                 
+                # Update plate info if previously missing/zero
+                if plate.get("plate_number") and str(plate.get("plate_number")) != "0":
+                    existing["plate_number"] = plate["plate_number"]
+                if plate.get("plate_code"):
+                    existing["plate_code"] = plate["plate_code"]
+                
                 if existing["current_price"] != plate["current_price"]:
                     existing["price_history"].append({"price": plate["current_price"], "timestamp": now})
                     updated_plates += 1
