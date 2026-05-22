@@ -3,7 +3,7 @@
   "emirate": "ajman",
   "display_name": "Ajman",
   "start_date": "2026-01-23T20:40:03.604836Z",
-  "last_updated": "2026-05-22T20:28:29.798821Z",
+  "last_updated": "2026-05-22T20:32:41.316897Z",
   "status": "active",
   "plates": {
     "3157": {
@@ -720,10 +720,10 @@
     "3159": {
       "plate_number": "302",
       "plate_code": "H",
-      "current_price": 119500,
-      "bid_count": 76,
+      "current_price": 120000,
+      "bid_count": 77,
       "first_seen": "2026-05-15T20:35:29.315783Z",
-      "last_seen": "2026-05-22T20:28:29.798738Z",
+      "last_seen": "2026-05-22T20:32:41.316763Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -931,6 +931,10 @@
         {
           "price": 119500,
           "timestamp": "2026-05-22T20:28:29.798738Z"
+        },
+        {
+          "price": 120000,
+          "timestamp": "2026-05-22T20:32:41.316763Z"
         }
       ]
     },
@@ -4100,10 +4104,10 @@
     "3183": {
       "plate_number": "54000",
       "plate_code": "K",
-      "current_price": 42600,
-      "bid_count": 79,
+      "current_price": 43000,
+      "bid_count": 81,
       "first_seen": "2026-05-15T20:35:29.315783Z",
-      "last_seen": "2026-05-22T20:28:29.798738Z",
+      "last_seen": "2026-05-22T20:32:41.316763Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -4263,6 +4267,10 @@
         {
           "price": 42600,
           "timestamp": "2026-05-22T20:21:49.586124Z"
+        },
+        {
+          "price": 43000,
+          "timestamp": "2026-05-22T20:32:41.316763Z"
         }
       ]
     },
@@ -4378,9 +4386,9 @@
       "bid_count": 65,
       "first_seen": "2026-05-15T20:35:29.315783Z",
       "last_seen": "2026-05-22T20:28:29.798738Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 42200,
+      "completed_at": "2026-05-22T20:32:41.316763Z",
       "price_history": [
         {
           "price": 5200,
@@ -4910,7 +4918,7 @@
   },
   "stats": {
     "total_plates_seen": 33,
-    "completed_plates": 30,
-    "active_plates": 3
+    "completed_plates": 31,
+    "active_plates": 2
   }
 }
