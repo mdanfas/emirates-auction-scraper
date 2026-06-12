@@ -3,7 +3,7 @@
   "emirate": "rak",
   "display_name": "Ras Al Khaimah",
   "start_date": "2026-04-17T20:13:47.364048Z",
-  "last_updated": "2026-06-12T19:29:00.301527Z",
+  "last_updated": "2026-06-12T19:32:05.697459Z",
   "status": "active",
   "plates": {
     "2032": {
@@ -78,7 +78,7 @@
       "current_price": 40000,
       "bid_count": 60,
       "first_seen": "2026-06-05T20:05:13.062862Z",
-      "last_seen": "2026-06-12T19:29:00.301419Z",
+      "last_seen": "2026-06-12T19:32:05.697345Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -429,10 +429,10 @@
     "2067": {
       "plate_number": "333",
       "plate_code": "1",
-      "current_price": 89500,
-      "bid_count": 90,
+      "current_price": 90000,
+      "bid_count": 91,
       "first_seen": "2026-06-05T20:05:13.062862Z",
-      "last_seen": "2026-06-12T19:29:00.301419Z",
+      "last_seen": "2026-06-12T19:32:05.697345Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -540,6 +540,10 @@
         {
           "price": 89500,
           "timestamp": "2026-06-12T19:29:00.301419Z"
+        },
+        {
+          "price": 90000,
+          "timestamp": "2026-06-12T19:32:05.697345Z"
         }
       ]
     },
@@ -836,7 +840,7 @@
       "current_price": 36500,
       "bid_count": 51,
       "first_seen": "2026-06-05T20:05:13.062862Z",
-      "last_seen": "2026-06-12T19:29:00.301419Z",
+      "last_seen": "2026-06-12T19:32:05.697345Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -2131,10 +2135,10 @@
     "2064": {
       "plate_number": "88888",
       "plate_code": "N",
-      "current_price": 322500,
-      "bid_count": 51,
+      "current_price": 323500,
+      "bid_count": 53,
       "first_seen": "2026-06-05T20:05:13.062862Z",
-      "last_seen": "2026-06-12T19:29:00.301419Z",
+      "last_seen": "2026-06-12T19:32:05.697345Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -2202,6 +2206,10 @@
         {
           "price": 322500,
           "timestamp": "2026-06-12T19:26:43.106733Z"
+        },
+        {
+          "price": 323500,
+          "timestamp": "2026-06-12T19:32:05.697345Z"
         }
       ]
     },
