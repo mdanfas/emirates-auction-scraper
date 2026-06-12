@@ -3,7 +3,7 @@
   "emirate": "rak",
   "display_name": "Ras Al Khaimah",
   "start_date": "2026-04-17T20:13:47.364048Z",
-  "last_updated": "2026-06-12T20:52:28.224332Z",
+  "last_updated": "2026-06-12T20:55:18.956197Z",
   "status": "active",
   "plates": {
     "2032": {
@@ -2231,10 +2231,10 @@
     "2064": {
       "plate_number": "88888",
       "plate_code": "N",
-      "current_price": 332000,
-      "bid_count": 70,
+      "current_price": 332500,
+      "bid_count": 71,
       "first_seen": "2026-06-05T20:05:13.062862Z",
-      "last_seen": "2026-06-12T20:52:28.224230Z",
+      "last_seen": "2026-06-12T20:55:18.956090Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -2350,6 +2350,10 @@
         {
           "price": 332000,
           "timestamp": "2026-06-12T20:49:40.553868Z"
+        },
+        {
+          "price": 332500,
+          "timestamp": "2026-06-12T20:55:18.956090Z"
         }
       ]
     },
