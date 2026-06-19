@@ -3,7 +3,7 @@
   "emirate": "uaq",
   "display_name": "Umm Al Quwain",
   "start_date": "2026-04-10T21:38:06.494568Z",
-  "last_updated": "2026-06-19T20:56:24.439798Z",
+  "last_updated": "2026-06-19T20:56:48.918389Z",
   "status": "active",
   "plates": {
     "7803": {
@@ -1131,9 +1131,9 @@
       "bid_count": 126,
       "first_seen": "2026-06-12T20:44:09.172474Z",
       "last_seen": "2026-06-19T20:56:24.439690Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 60200,
+      "completed_at": "2026-06-19T20:56:48.918285Z",
       "price_history": [
         {
           "price": 2000,
@@ -3621,10 +3621,10 @@
     "7795": {
       "plate_number": "321",
       "plate_code": "G",
-      "current_price": 150500,
-      "bid_count": 110,
+      "current_price": 151000,
+      "bid_count": 111,
       "first_seen": "2026-06-12T20:44:09.172474Z",
-      "last_seen": "2026-06-19T20:56:24.439690Z",
+      "last_seen": "2026-06-19T20:56:48.918285Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -3800,6 +3800,10 @@
         {
           "price": 150500,
           "timestamp": "2026-06-19T20:56:24.439690Z"
+        },
+        {
+          "price": 151000,
+          "timestamp": "2026-06-19T20:56:48.918285Z"
         }
       ]
     },
@@ -4508,10 +4512,10 @@
     "7796": {
       "plate_number": "444",
       "plate_code": "G",
-      "current_price": 315500,
-      "bid_count": 93,
+      "current_price": 320500,
+      "bid_count": 95,
       "first_seen": "2026-06-12T20:44:09.172474Z",
-      "last_seen": "2026-06-19T20:56:24.439690Z",
+      "last_seen": "2026-06-19T20:56:48.918285Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -4687,6 +4691,10 @@
         {
           "price": 315500,
           "timestamp": "2026-06-19T20:50:10.868384Z"
+        },
+        {
+          "price": 320500,
+          "timestamp": "2026-06-19T20:56:48.918285Z"
         }
       ]
     },
@@ -6089,7 +6097,7 @@
   },
   "stats": {
     "total_plates_seen": 44,
-    "completed_plates": 41,
-    "active_plates": 3
+    "completed_plates": 42,
+    "active_plates": 2
   }
 }
