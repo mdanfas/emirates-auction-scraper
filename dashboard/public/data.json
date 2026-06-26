@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T21:20:39.457412Z",
+  "generated_at": "2026-06-26T23:08:49.969882Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -12378,7 +12378,7 @@
       "auction_id": "abudhabi_2026-05",
       "emirate": "Abu Dhabi",
       "start_date": "2026-05-02T20:36:55.800129Z",
-      "last_updated": "2026-06-26T21:20:37.912887Z",
+      "last_updated": "2026-06-26T23:08:48.301245Z",
       "status": "active",
       "plates": [
         {
@@ -12454,6 +12454,14 @@
           "status": "active"
         },
         {
+          "id": "27296",
+          "plate_number": "113",
+          "plate_code": "11",
+          "price": 720000,
+          "bid_count": 5,
+          "status": "active"
+        },
+        {
           "id": "27018",
           "plate_number": "141",
           "plate_code": "14",
@@ -12465,8 +12473,8 @@
           "id": "27304",
           "plate_number": "701",
           "plate_code": "1",
-          "price": 690000,
-          "bid_count": 2,
+          "price": 691000,
+          "bid_count": 3,
           "status": "active"
         },
         {
@@ -12475,14 +12483,6 @@
           "plate_code": "22",
           "price": 600000,
           "bid_count": 2,
-          "status": "active"
-        },
-        {
-          "id": "27296",
-          "plate_number": "113",
-          "plate_code": "11",
-          "price": 500000,
-          "bid_count": 4,
           "status": "active"
         },
         {
@@ -12534,11 +12534,35 @@
           "status": "active"
         },
         {
+          "id": "27309",
+          "plate_number": "970",
+          "plate_code": "1",
+          "price": 300000,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27024",
+          "plate_number": "570",
+          "plate_code": "10",
+          "price": 222000,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
           "id": "27330",
           "plate_number": "2000",
           "plate_code": "22",
-          "price": 201000,
-          "bid_count": 5,
+          "price": 203000,
+          "bid_count": 7,
+          "status": "active"
+        },
+        {
+          "id": "27020",
+          "plate_number": "330",
+          "plate_code": "11",
+          "price": 180000,
+          "bid_count": 2,
           "status": "active"
         },
         {
@@ -12553,16 +12577,16 @@
           "id": "27312",
           "plate_number": "1101",
           "plate_code": "21",
-          "price": 150000,
-          "bid_count": 1,
+          "price": 150500,
+          "bid_count": 2,
           "status": "active"
         },
         {
           "id": "27030",
           "plate_number": "987",
           "plate_code": "6",
-          "price": 141000,
-          "bid_count": 1,
+          "price": 142000,
+          "bid_count": 2,
           "status": "active"
         },
         {
@@ -12582,9 +12606,25 @@
           "status": "active"
         },
         {
-          "id": "27020",
-          "plate_number": "330",
+          "id": "27306",
+          "plate_number": "771",
+          "plate_code": "17",
+          "price": 131000,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "27028",
+          "plate_number": "818",
           "plate_code": "11",
+          "price": 131000,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "27031",
+          "plate_number": "992",
+          "plate_code": "22",
           "price": 131000,
           "bid_count": 1,
           "status": "active"
@@ -12598,38 +12638,6 @@
           "status": "active"
         },
         {
-          "id": "27306",
-          "plate_number": "771",
-          "plate_code": "17",
-          "price": 130000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
-          "id": "27028",
-          "plate_number": "818",
-          "plate_code": "11",
-          "price": 130000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
-          "id": "27031",
-          "plate_number": "992",
-          "plate_code": "22",
-          "price": 130000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
-          "id": "27024",
-          "plate_number": "570",
-          "plate_code": "10",
-          "price": 120000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
           "id": "27027",
           "plate_number": "690",
           "plate_code": "50",
@@ -12638,19 +12646,19 @@
           "status": "active"
         },
         {
-          "id": "27309",
-          "plate_number": "970",
-          "plate_code": "1",
-          "price": 120000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
           "id": "27334",
           "plate_number": "2020",
           "plate_code": "22",
-          "price": 101500,
-          "bid_count": 5,
+          "price": 102500,
+          "bid_count": 7,
+          "status": "active"
+        },
+        {
+          "id": "27307",
+          "plate_number": "849",
+          "plate_code": "6",
+          "price": 101000,
+          "bid_count": 1,
           "status": "active"
         },
         {
@@ -12670,34 +12678,34 @@
           "status": "active"
         },
         {
-          "id": "27307",
-          "plate_number": "849",
-          "plate_code": "6",
-          "price": 100000,
-          "bid_count": 0,
+          "id": "27353",
+          "plate_number": "3999",
+          "plate_code": "2",
+          "price": 88000,
+          "bid_count": 5,
+          "status": "active"
+        },
+        {
+          "id": "27046",
+          "plate_number": "1818",
+          "plate_code": "21",
+          "price": 75000,
+          "bid_count": 2,
           "status": "active"
         },
         {
           "id": "27066",
           "plate_number": "2211",
           "plate_code": "22",
-          "price": 51000,
-          "bid_count": 4,
+          "price": 51500,
+          "bid_count": 5,
           "status": "active"
         },
         {
           "id": "27351",
           "plate_number": "3443",
           "plate_code": "2",
-          "price": 51000,
-          "bid_count": 3,
-          "status": "active"
-        },
-        {
-          "id": "27353",
-          "plate_number": "3999",
-          "plate_code": "2",
-          "price": 51000,
+          "price": 51500,
           "bid_count": 4,
           "status": "active"
         },
@@ -12705,16 +12713,16 @@
           "id": "27055",
           "plate_number": "1991",
           "plate_code": "22",
-          "price": 50500,
-          "bid_count": 3,
+          "price": 51000,
+          "bid_count": 4,
           "status": "active"
         },
         {
           "id": "27059",
           "plate_number": "1999",
           "plate_code": "23",
-          "price": 50500,
-          "bid_count": 2,
+          "price": 51000,
+          "bid_count": 3,
           "status": "active"
         },
         {
@@ -12728,6 +12736,30 @@
         {
           "id": "27067",
           "plate_number": "2229",
+          "plate_code": "22",
+          "price": 50500,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27074",
+          "plate_number": "3300",
+          "plate_code": "23",
+          "price": 50500,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27075",
+          "plate_number": "3330",
+          "plate_code": "23",
+          "price": 50500,
+          "bid_count": 3,
+          "status": "active"
+        },
+        {
+          "id": "27078",
+          "plate_number": "4004",
           "plate_code": "22",
           "price": 50500,
           "bid_count": 2,
@@ -12750,14 +12782,6 @@
           "status": "active"
         },
         {
-          "id": "27046",
-          "plate_number": "1818",
-          "plate_code": "21",
-          "price": 50000,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
           "id": "27065",
           "plate_number": "2202",
           "plate_code": "19",
@@ -12766,16 +12790,8 @@
           "status": "active"
         },
         {
-          "id": "27074",
-          "plate_number": "3300",
-          "plate_code": "23",
-          "price": 50000,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "27075",
-          "plate_number": "3330",
+          "id": "27346",
+          "plate_number": "3232",
           "plate_code": "23",
           "price": 50000,
           "bid_count": 2,
@@ -12798,14 +12814,6 @@
           "status": "active"
         },
         {
-          "id": "27078",
-          "plate_number": "4004",
-          "plate_code": "22",
-          "price": 50000,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
           "id": "27275",
           "plate_number": "18",
           "plate_code": "0",
@@ -12817,32 +12825,24 @@
           "id": "27263",
           "plate_number": "23",
           "plate_code": "1",
-          "price": 30500,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "27346",
-          "plate_number": "3232",
-          "plate_code": "23",
-          "price": 30500,
-          "bid_count": 1,
+          "price": 31000,
+          "bid_count": 2,
           "status": "active"
         },
         {
           "id": "27331",
           "plate_number": "2002",
           "plate_code": "23",
-          "price": 26000,
-          "bid_count": 2,
+          "price": 26500,
+          "bid_count": 3,
           "status": "active"
         },
         {
           "id": "27318",
           "plate_number": "1222",
           "plate_code": "22",
-          "price": 21500,
-          "bid_count": 3,
+          "price": 22000,
+          "bid_count": 4,
           "status": "active"
         },
         {
@@ -12865,8 +12865,8 @@
           "id": "27277",
           "plate_number": "232",
           "plate_code": "0",
-          "price": 15000,
-          "bid_count": 0,
+          "price": 15500,
+          "bid_count": 1,
           "status": "active"
         },
         {
@@ -12929,6 +12929,14 @@
           "id": "27069",
           "plate_number": "2345",
           "plate_code": "18",
+          "price": 11000,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27352",
+          "plate_number": "3456",
+          "plate_code": "23",
           "price": 10500,
           "bid_count": 1,
           "status": "active"
@@ -12950,19 +12958,27 @@
           "status": "active"
         },
         {
-          "id": "27352",
-          "plate_number": "3456",
-          "plate_code": "23",
-          "price": 10000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
           "id": "27329",
           "plate_number": "1997",
           "plate_code": "22",
           "price": 7000,
           "bid_count": 4,
+          "status": "active"
+        },
+        {
+          "id": "27060",
+          "plate_number": "2003",
+          "plate_code": "23",
+          "price": 6500,
+          "bid_count": 3,
+          "status": "active"
+        },
+        {
+          "id": "27054",
+          "plate_number": "1990",
+          "plate_code": "22",
+          "price": 6000,
+          "bid_count": 2,
           "status": "active"
         },
         {
@@ -12985,14 +13001,6 @@
           "id": "27058",
           "plate_number": "1998",
           "plate_code": "22",
-          "price": 6000,
-          "bid_count": 2,
-          "status": "active"
-        },
-        {
-          "id": "27060",
-          "plate_number": "2003",
-          "plate_code": "23",
           "price": 6000,
           "bid_count": 2,
           "status": "active"
@@ -13022,6 +13030,30 @@
           "status": "active"
         },
         {
+          "id": "27035",
+          "plate_number": "1180",
+          "plate_code": "18",
+          "price": 5500,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "27042",
+          "plate_number": "1255",
+          "plate_code": "21",
+          "price": 5500,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
+          "id": "27043",
+          "plate_number": "1400",
+          "plate_code": "13",
+          "price": 5500,
+          "bid_count": 1,
+          "status": "active"
+        },
+        {
           "id": "27323",
           "plate_number": "1662",
           "plate_code": "2",
@@ -13032,14 +13064,6 @@
         {
           "id": "27324",
           "plate_number": "1911",
-          "plate_code": "22",
-          "price": 5500,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "27054",
-          "plate_number": "1990",
           "plate_code": "22",
           "price": 5500,
           "bid_count": 1,
@@ -13134,33 +13158,9 @@
           "status": "active"
         },
         {
-          "id": "27035",
-          "plate_number": "1180",
-          "plate_code": "18",
-          "price": 5000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
           "id": "27040",
           "plate_number": "1223",
           "plate_code": "21",
-          "price": 5000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
-          "id": "27042",
-          "plate_number": "1255",
-          "plate_code": "21",
-          "price": 5000,
-          "bid_count": 0,
-          "status": "active"
-        },
-        {
-          "id": "27043",
-          "plate_number": "1400",
-          "plate_code": "13",
           "price": 5000,
           "bid_count": 0,
           "status": "active"
@@ -13177,6 +13177,14 @@
           "id": "27052",
           "plate_number": "1981",
           "plate_code": "23",
+          "price": 5000,
+          "bid_count": 4,
+          "status": "active"
+        },
+        {
+          "id": "27333",
+          "plate_number": "2010",
+          "plate_code": "19",
           "price": 5000,
           "bid_count": 4,
           "status": "active"
@@ -13238,17 +13246,25 @@
           "status": "active"
         },
         {
-          "id": "27333",
-          "plate_number": "2010",
-          "plate_code": "19",
-          "price": 4500,
-          "bid_count": 3,
-          "status": "active"
-        },
-        {
           "id": "27044",
           "plate_number": "1678",
           "plate_code": "1",
+          "price": 4000,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27326",
+          "plate_number": "1984",
+          "plate_code": "23",
+          "price": 4000,
+          "bid_count": 2,
+          "status": "active"
+        },
+        {
+          "id": "27053",
+          "plate_number": "1985",
+          "plate_code": "22",
           "price": 4000,
           "bid_count": 2,
           "status": "active"
@@ -13296,22 +13312,6 @@
         {
           "id": "27051",
           "plate_number": "1980",
-          "plate_code": "22",
-          "price": 3500,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "27326",
-          "plate_number": "1984",
-          "plate_code": "23",
-          "price": 3500,
-          "bid_count": 1,
-          "status": "active"
-        },
-        {
-          "id": "27053",
-          "plate_number": "1985",
           "plate_code": "22",
           "price": 3500,
           "bid_count": 1,
@@ -13518,19 +13518,19 @@
           "status": "active"
         },
         {
-          "id": "27268",
-          "plate_number": "4040",
-          "plate_code": "1",
+          "id": "27559",
+          "plate_number": "1005",
+          "plate_code": "0",
           "price": 2000,
           "bid_count": 1,
           "status": "active"
         },
         {
-          "id": "27559",
-          "plate_number": "1005",
-          "plate_code": "0",
-          "price": 1500,
-          "bid_count": 0,
+          "id": "27268",
+          "plate_number": "4040",
+          "plate_code": "1",
+          "price": 2000,
+          "bid_count": 1,
           "status": "active"
         },
         {
