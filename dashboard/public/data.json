@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T20:06:52.350796Z",
+  "generated_at": "2026-07-03T20:08:40.256142Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -12378,7 +12378,7 @@
       "auction_id": "abudhabi_2026-05",
       "emirate": "Abu Dhabi",
       "start_date": "2026-05-02T20:36:55.800129Z",
-      "last_updated": "2026-07-03T20:06:50.330429Z",
+      "last_updated": "2026-07-03T20:08:38.030882Z",
       "status": "active",
       "plates": [
         {
@@ -13219,7 +13219,7 @@
           "plate_code": "22",
           "price": 140000,
           "bid_count": 101,
-          "status": "active"
+          "status": "completed"
         },
         {
           "id": "27128",
@@ -14036,6 +14036,14 @@
           "price": 79000,
           "bid_count": 12,
           "status": "completed"
+        },
+        {
+          "id": "27440",
+          "plate_number": "22022",
+          "plate_code": "23",
+          "price": 78500,
+          "bid_count": 6,
+          "status": "active"
         },
         {
           "id": "27324",
@@ -15862,7 +15870,7 @@
           "status": "completed"
         }
       ],
-      "count": 435
+      "count": 436
     },
     "dubai": {
       "auction_id": "dubai_2026-05",
@@ -294863,7 +294871,7 @@
     "buynow_available": 228,
     "buynow_sold": 1139,
     "buynow_total": 1367,
-    "auctions_total": 435,
+    "auctions_total": 436,
     "archives_count": 29,
     "archived_buynow_count": 24,
     "archived_tracking_count": 37,
