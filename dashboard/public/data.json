@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T19:36:01.145466Z",
+  "generated_at": "2026-07-03T19:38:20.329377Z",
   "buynow": {
     "ajman": {
       "emirate": "Ajman",
@@ -12378,7 +12378,7 @@
       "auction_id": "abudhabi_2026-05",
       "emirate": "Abu Dhabi",
       "start_date": "2026-05-02T20:36:55.800129Z",
-      "last_updated": "2026-07-03T19:35:58.658345Z",
+      "last_updated": "2026-07-03T19:38:17.716424Z",
       "status": "active",
       "plates": [
         {
@@ -13065,8 +13065,8 @@
           "id": "27150",
           "plate_number": "15551",
           "plate_code": "22",
-          "price": 163500,
-          "bid_count": 138,
+          "price": 164000,
+          "bid_count": 139,
           "status": "active"
         },
         {
@@ -13238,6 +13238,14 @@
           "status": "completed"
         },
         {
+          "id": "27139",
+          "plate_number": "11144",
+          "plate_code": "14",
+          "price": 135500,
+          "bid_count": 88,
+          "status": "active"
+        },
+        {
           "id": "27248",
           "plate_number": "88088",
           "plate_code": "16",
@@ -13260,14 +13268,6 @@
           "price": 135000,
           "bid_count": 43,
           "status": "completed"
-        },
-        {
-          "id": "27139",
-          "plate_number": "11144",
-          "plate_code": "14",
-          "price": 135000,
-          "bid_count": 87,
-          "status": "active"
         },
         {
           "id": "27254",
@@ -13814,20 +13814,20 @@
           "status": "completed"
         },
         {
+          "id": "27096",
+          "plate_number": "6543",
+          "plate_code": "15",
+          "price": 94000,
+          "bid_count": 86,
+          "status": "active"
+        },
+        {
           "id": "27042",
           "plate_number": "1255",
           "plate_code": "21",
           "price": 93500,
           "bid_count": 81,
           "status": "completed"
-        },
-        {
-          "id": "27096",
-          "plate_number": "6543",
-          "plate_code": "15",
-          "price": 93500,
-          "bid_count": 85,
-          "status": "active"
         },
         {
           "id": "27234",
@@ -13878,6 +13878,14 @@
           "status": "completed"
         },
         {
+          "id": "27219",
+          "plate_number": "61166",
+          "plate_code": "16",
+          "price": 90500,
+          "bid_count": 71,
+          "status": "active"
+        },
+        {
           "id": "27034",
           "plate_number": "1125",
           "plate_code": "50",
@@ -13908,14 +13916,6 @@
           "price": 89000,
           "bid_count": 59,
           "status": "completed"
-        },
-        {
-          "id": "27219",
-          "plate_number": "61166",
-          "plate_code": "16",
-          "price": 88000,
-          "bid_count": 68,
-          "status": "active"
         },
         {
           "id": "27216",
@@ -14374,6 +14374,22 @@
           "status": "completed"
         },
         {
+          "id": "27168",
+          "plate_number": "23300",
+          "plate_code": "23",
+          "price": 60000,
+          "bid_count": 94,
+          "status": "active"
+        },
+        {
+          "id": "27426",
+          "plate_number": "15151",
+          "plate_code": "20",
+          "price": 60000,
+          "bid_count": 6,
+          "status": "active"
+        },
+        {
           "id": "27232",
           "plate_number": "70888",
           "plate_code": "11",
@@ -14388,14 +14404,6 @@
           "price": 59000,
           "bid_count": 75,
           "status": "completed"
-        },
-        {
-          "id": "27168",
-          "plate_number": "23300",
-          "plate_code": "23",
-          "price": 58500,
-          "bid_count": 92,
-          "status": "active"
         },
         {
           "id": "27185",
@@ -15750,7 +15758,7 @@
           "status": "completed"
         }
       ],
-      "count": 421
+      "count": 422
     },
     "dubai": {
       "auction_id": "dubai_2026-05",
@@ -294751,7 +294759,7 @@
     "buynow_available": 228,
     "buynow_sold": 1139,
     "buynow_total": 1367,
-    "auctions_total": 421,
+    "auctions_total": 422,
     "archives_count": 29,
     "archived_buynow_count": 24,
     "archived_tracking_count": 37,
