@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-07-04T20:05:04.492915Z",
-  "last_updated": "2026-07-04T21:31:59.348391Z",
+  "last_updated": "2026-07-04T21:33:55.626269Z",
   "status": "active",
   "plates": {
     "27309": {
@@ -26,10 +26,10 @@
     "27296": {
       "plate_number": "113",
       "plate_code": "11",
-      "current_price": 975000,
-      "bid_count": 145,
+      "current_price": 980000,
+      "bid_count": 147,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:31:59.348317Z",
+      "last_seen": "2026-07-04T21:33:55.626182Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -113,6 +113,10 @@
         {
           "price": 975000,
           "timestamp": "2026-07-04T21:30:24.495947Z"
+        },
+        {
+          "price": 980000,
+          "timestamp": "2026-07-04T21:33:55.626182Z"
         }
       ]
     },
@@ -176,10 +180,10 @@
     "27305": {
       "plate_number": "722",
       "plate_code": "22",
-      "current_price": 896000,
-      "bid_count": 151,
+      "current_price": 930000,
+      "bid_count": 153,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:31:59.348317Z",
+      "last_seen": "2026-07-04T21:33:55.626182Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -287,16 +291,20 @@
         {
           "price": 896000,
           "timestamp": "2026-07-04T21:28:31.823611Z"
+        },
+        {
+          "price": 930000,
+          "timestamp": "2026-07-04T21:33:55.626182Z"
         }
       ]
     },
     "27293": {
       "plate_number": "63",
       "plate_code": "10",
-      "current_price": 3922000,
-      "bid_count": 153,
+      "current_price": 3923000,
+      "bid_count": 154,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:31:59.348317Z",
+      "last_seen": "2026-07-04T21:33:55.626182Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -392,6 +400,10 @@
         {
           "price": 3922000,
           "timestamp": "2026-07-04T21:28:31.823611Z"
+        },
+        {
+          "price": 3923000,
+          "timestamp": "2026-07-04T21:33:55.626182Z"
         }
       ]
     }
