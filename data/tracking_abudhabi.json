@@ -3,7 +3,7 @@
   "emirate": "abudhabi",
   "display_name": "Abu Dhabi",
   "start_date": "2026-07-04T20:05:04.492915Z",
-  "last_updated": "2026-07-04T21:41:15.711204Z",
+  "last_updated": "2026-07-04T21:42:56.526214Z",
   "status": "active",
   "plates": {
     "27309": {
@@ -29,7 +29,7 @@
       "current_price": 1002000,
       "bid_count": 151,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:41:15.711124Z",
+      "last_seen": "2026-07-04T21:42:56.526136Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -188,10 +188,10 @@
     "27305": {
       "plate_number": "722",
       "plate_code": "22",
-      "current_price": 954000,
-      "bid_count": 160,
+      "current_price": 1000000,
+      "bid_count": 162,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:41:15.711124Z",
+      "last_seen": "2026-07-04T21:42:56.526136Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -315,16 +315,20 @@
         {
           "price": 954000,
           "timestamp": "2026-07-04T21:41:15.711124Z"
+        },
+        {
+          "price": 1000000,
+          "timestamp": "2026-07-04T21:42:56.526136Z"
         }
       ]
     },
     "27293": {
       "plate_number": "63",
       "plate_code": "10",
-      "current_price": 3924000,
-      "bid_count": 155,
+      "current_price": 3925000,
+      "bid_count": 156,
       "first_seen": "2026-07-04T20:07:02.596184Z",
-      "last_seen": "2026-07-04T21:41:15.711124Z",
+      "last_seen": "2026-07-04T21:42:56.526136Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -428,6 +432,10 @@
         {
           "price": 3924000,
           "timestamp": "2026-07-04T21:37:27.690832Z"
+        },
+        {
+          "price": 3925000,
+          "timestamp": "2026-07-04T21:42:56.526136Z"
         }
       ]
     }
