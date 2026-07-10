@@ -3,7 +3,7 @@
   "emirate": "fujairah",
   "display_name": "Fujairah",
   "start_date": "2026-05-15T21:03:26.264962Z",
-  "last_updated": "2026-07-10T21:48:03.177481Z",
+  "last_updated": "2026-07-10T21:51:31.367187Z",
   "status": "active",
   "plates": {
     "3202": {
@@ -445,10 +445,10 @@
     "3206": {
       "plate_number": "123",
       "plate_code": "N",
-      "current_price": 222000,
-      "bid_count": 219,
+      "current_price": 224000,
+      "bid_count": 223,
       "first_seen": "2026-07-03T20:12:17.266816Z",
-      "last_seen": "2026-07-10T21:48:03.177228Z",
+      "last_seen": "2026-07-10T21:51:31.366951Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -708,6 +708,10 @@
         {
           "price": 222000,
           "timestamp": "2026-07-10T21:46:06.388482Z"
+        },
+        {
+          "price": 224000,
+          "timestamp": "2026-07-10T21:51:31.366951Z"
         }
       ]
     },
@@ -1779,10 +1783,10 @@
     "3216": {
       "plate_number": "888",
       "plate_code": "N",
-      "current_price": 363500,
-      "bid_count": 98,
+      "current_price": 368000,
+      "bid_count": 100,
       "first_seen": "2026-07-03T20:12:17.266816Z",
-      "last_seen": "2026-07-10T21:48:03.177228Z",
+      "last_seen": "2026-07-10T21:51:31.366951Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1974,6 +1978,10 @@
         {
           "price": 363500,
           "timestamp": "2026-07-10T21:46:06.388482Z"
+        },
+        {
+          "price": 368000,
+          "timestamp": "2026-07-10T21:51:31.366951Z"
         }
       ]
     },
