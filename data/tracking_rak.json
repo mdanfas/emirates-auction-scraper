@@ -3,7 +3,7 @@
   "emirate": "rak",
   "display_name": "Ras Al Khaimah",
   "start_date": "2026-09-06T10:30:43.721989Z",
-  "last_updated": "2026-09-11T20:16:02.650085Z",
+  "last_updated": "2026-09-11T20:21:35.573974Z",
   "status": "active",
   "plates": {
     "2072": {
@@ -287,10 +287,10 @@
     "2106": {
       "plate_number": "700",
       "plate_code": "1",
-      "current_price": 38500,
-      "bid_count": 41,
+      "current_price": 39000,
+      "bid_count": 42,
       "first_seen": "2026-09-06T14:00:08.529595Z",
-      "last_seen": "2026-09-11T20:16:02.649964Z",
+      "last_seen": "2026-09-11T20:21:35.573855Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -398,6 +398,10 @@
         {
           "price": 38500,
           "timestamp": "2026-09-11T20:16:02.649964Z"
+        },
+        {
+          "price": 39000,
+          "timestamp": "2026-09-11T20:21:35.573855Z"
         }
       ]
     },
@@ -564,9 +568,9 @@
       "bid_count": 64,
       "first_seen": "2026-09-06T14:00:08.529595Z",
       "last_seen": "2026-09-11T20:16:02.649964Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 140300,
+      "completed_at": "2026-09-11T20:21:35.573855Z",
       "price_history": [
         {
           "price": 107800,
@@ -1255,10 +1259,10 @@
     "2110": {
       "plate_number": "9000",
       "plate_code": "1",
-      "current_price": 33000,
-      "bid_count": 47,
+      "current_price": 34000,
+      "bid_count": 49,
       "first_seen": "2026-09-06T14:00:08.529595Z",
-      "last_seen": "2026-09-11T20:16:02.649964Z",
+      "last_seen": "2026-09-11T20:21:35.573855Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1358,6 +1362,10 @@
         {
           "price": 33000,
           "timestamp": "2026-09-11T20:16:02.649964Z"
+        },
+        {
+          "price": 34000,
+          "timestamp": "2026-09-11T20:21:35.573855Z"
         }
       ]
     },
@@ -1447,10 +1455,10 @@
     "2098": {
       "plate_number": "25000",
       "plate_code": "Z",
-      "current_price": 45600,
-      "bid_count": 60,
+      "current_price": 45800,
+      "bid_count": 61,
       "first_seen": "2026-09-06T14:00:08.529595Z",
-      "last_seen": "2026-09-11T20:16:02.649964Z",
+      "last_seen": "2026-09-11T20:21:35.573855Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1558,16 +1566,20 @@
         {
           "price": 45600,
           "timestamp": "2026-09-11T20:16:02.649964Z"
+        },
+        {
+          "price": 45800,
+          "timestamp": "2026-09-11T20:21:35.573855Z"
         }
       ]
     },
     "2099": {
       "plate_number": "33333",
       "plate_code": "Z",
-      "current_price": 315100,
-      "bid_count": 43,
+      "current_price": 315600,
+      "bid_count": 44,
       "first_seen": "2026-09-06T14:00:08.529595Z",
-      "last_seen": "2026-09-11T20:16:02.649964Z",
+      "last_seen": "2026-09-11T20:21:35.573855Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1651,6 +1663,10 @@
         {
           "price": 315100,
           "timestamp": "2026-09-11T20:10:34.204363Z"
+        },
+        {
+          "price": 315600,
+          "timestamp": "2026-09-11T20:21:35.573855Z"
         }
       ]
     },
@@ -1718,10 +1734,10 @@
     "2100": {
       "plate_number": "54000",
       "plate_code": "M",
-      "current_price": 37700,
-      "bid_count": 61,
+      "current_price": 39100,
+      "bid_count": 68,
       "first_seen": "2026-09-06T14:00:08.529595Z",
-      "last_seen": "2026-09-11T20:16:02.649964Z",
+      "last_seen": "2026-09-11T20:21:35.573855Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1825,6 +1841,10 @@
         {
           "price": 37700,
           "timestamp": "2026-09-11T20:16:02.649964Z"
+        },
+        {
+          "price": 39100,
+          "timestamp": "2026-09-11T20:21:35.573855Z"
         }
       ]
     },
@@ -2033,7 +2053,7 @@
   },
   "stats": {
     "total_plates_seen": 44,
-    "completed_plates": 38,
-    "active_plates": 6
+    "completed_plates": 39,
+    "active_plates": 5
   }
 }
