@@ -3,7 +3,7 @@
   "emirate": "fujairah",
   "display_name": "Fujairah",
   "start_date": "2026-07-10T22:38:49.949373Z",
-  "last_updated": "2026-09-18T21:34:07.761234Z",
+  "last_updated": "2026-09-18T21:34:51.440572Z",
   "status": "active",
   "plates": {
     "3252": {
@@ -1686,10 +1686,10 @@
     "3269": {
       "plate_number": "666",
       "plate_code": "N",
-      "current_price": 380500,
-      "bid_count": 72,
+      "current_price": 381000,
+      "bid_count": 73,
       "first_seen": "2026-09-11T20:43:36.766159Z",
-      "last_seen": "2026-09-18T21:34:07.761003Z",
+      "last_seen": "2026-09-18T21:34:51.440274Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -1825,6 +1825,10 @@
         {
           "price": 380500,
           "timestamp": "2026-09-18T21:34:07.761003Z"
+        },
+        {
+          "price": 381000,
+          "timestamp": "2026-09-18T21:34:51.440274Z"
         }
       ]
     },
