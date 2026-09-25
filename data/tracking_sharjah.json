@@ -3,16 +3,16 @@
   "emirate": "sharjah",
   "display_name": "Sharjah",
   "start_date": "2026-07-17T21:57:50.572659Z",
-  "last_updated": "2026-09-25T22:04:10.453238Z",
+  "last_updated": "2026-09-25T22:08:20.823738Z",
   "status": "active",
   "plates": {
     "2208": {
       "plate_number": "12",
       "plate_code": "4",
-      "current_price": 2400000,
-      "bid_count": 190,
+      "current_price": 2412000,
+      "bid_count": 192,
       "first_seen": "2026-09-18T21:34:01.551750Z",
-      "last_seen": "2026-09-25T22:04:10.453142Z",
+      "last_seen": "2026-09-25T22:08:20.823642Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -232,6 +232,10 @@
         {
           "price": 2400000,
           "timestamp": "2026-09-25T22:02:50.515000Z"
+        },
+        {
+          "price": 2412000,
+          "timestamp": "2026-09-25T22:08:20.823642Z"
         }
       ]
     },
@@ -371,10 +375,10 @@
     "2210": {
       "plate_number": "53",
       "plate_code": "3",
-      "current_price": 1582000,
-      "bid_count": 240,
+      "current_price": 1586000,
+      "bid_count": 242,
       "first_seen": "2026-09-18T21:34:01.551750Z",
-      "last_seen": "2026-09-25T22:04:10.453142Z",
+      "last_seen": "2026-09-25T22:08:20.823642Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -598,6 +602,10 @@
         {
           "price": 1582000,
           "timestamp": "2026-09-25T22:02:50.515000Z"
+        },
+        {
+          "price": 1586000,
+          "timestamp": "2026-09-25T22:08:20.823642Z"
         }
       ]
     },
@@ -5956,9 +5964,9 @@
       "bid_count": 166,
       "first_seen": "2026-09-18T21:34:01.551750Z",
       "last_seen": "2026-09-25T22:04:10.453142Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 148500,
+      "completed_at": "2026-09-25T22:08:20.823642Z",
       "price_history": [
         {
           "price": 5000,
@@ -9062,7 +9070,7 @@
   },
   "stats": {
     "total_plates_seen": 77,
-    "completed_plates": 74,
-    "active_plates": 3
+    "completed_plates": 75,
+    "active_plates": 2
   }
 }
