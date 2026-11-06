@@ -3,7 +3,7 @@
   "emirate": "fujairah",
   "display_name": "Fujairah",
   "start_date": "2026-09-18T22:23:56.460212Z",
-  "last_updated": "2026-11-06T21:21:03.411931Z",
+  "last_updated": "2026-11-06T21:26:32.965852Z",
   "status": "active",
   "plates": {
     "3372": {
@@ -8417,9 +8417,9 @@
       "bid_count": 105,
       "first_seen": "2026-10-29T09:33:47.106525Z",
       "last_seen": "2026-11-06T21:21:03.411613Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 309500,
+      "completed_at": "2026-11-06T21:26:32.965612Z",
       "price_history": [
         {
           "price": 160000,
@@ -9331,7 +9331,7 @@
       "current_price": 61400,
       "bid_count": 175,
       "first_seen": "2026-10-29T09:33:47.106525Z",
-      "last_seen": "2026-11-06T21:21:03.411613Z",
+      "last_seen": "2026-11-06T21:26:32.965612Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -9800,10 +9800,10 @@
     "3479": {
       "plate_number": "999",
       "plate_code": "B",
-      "current_price": 73400,
-      "bid_count": 202,
+      "current_price": 75200,
+      "bid_count": 208,
       "first_seen": "2026-10-29T09:33:47.106525Z",
-      "last_seen": "2026-11-06T21:21:03.411613Z",
+      "last_seen": "2026-11-06T21:26:32.965612Z",
       "status": "active",
       "final_price": null,
       "completed_at": null,
@@ -9999,6 +9999,10 @@
         {
           "price": 73400,
           "timestamp": "2026-11-06T21:21:03.411613Z"
+        },
+        {
+          "price": 75200,
+          "timestamp": "2026-11-06T21:26:32.965612Z"
         }
       ]
     },
@@ -10896,9 +10900,9 @@
       "bid_count": 191,
       "first_seen": "2026-10-29T09:33:47.106525Z",
       "last_seen": "2026-11-06T21:21:03.411613Z",
-      "status": "active",
-      "final_price": null,
-      "completed_at": null,
+      "status": "completed",
+      "final_price": 92400,
+      "completed_at": "2026-11-06T21:26:32.965612Z",
       "price_history": [
         {
           "price": 15600,
@@ -11429,7 +11433,7 @@
   },
   "stats": {
     "total_plates_seen": 120,
-    "completed_plates": 116,
-    "active_plates": 4
+    "completed_plates": 118,
+    "active_plates": 2
   }
 }
